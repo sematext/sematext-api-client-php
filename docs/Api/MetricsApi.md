@@ -1,0 +1,232 @@
+# Swagger\Client\MetricsApi
+
+All URIs are relative to *https://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**listDataSeriesUsingPOST1**](MetricsApi.md#listDataSeriesUsingPOST1) | **POST** /spm-reports/api/v3/apps/{appId}/metrics/data | Get metrics data points for an app
+[**listFiltersUsingPOST**](MetricsApi.md#listFiltersUsingPOST) | **POST** /spm-reports/api/v3/apps/{appId}/metrics/filters | Get metrics filters and their values for an app
+[**listMetricsKeysUsingGET1**](MetricsApi.md#listMetricsKeysUsingGET1) | **GET** /spm-reports/api/v3/apps/{appId}/metrics/keys | Get metrics keys for an app
+[**listMetricsUsingGET1**](MetricsApi.md#listMetricsUsingGET1) | **GET** /spm-reports/api/v3/apps/{appId}/metrics | Get metrics info for an app
+
+
+# **listDataSeriesUsingPOST1**
+> \Swagger\Client\Model\GenericApiResponse listDataSeriesUsingPOST1($app_id, $request_body)
+
+Get metrics data points for an app
+
+Default value of interval is 5m
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$apiInstance = new Swagger\Client\Api\MetricsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = 789; // int | appId
+$request_body = new \Swagger\Client\Model\DataSeriesRequest(); // \Swagger\Client\Model\DataSeriesRequest | Metric data points request
+
+try {
+    $result = $apiInstance->listDataSeriesUsingPOST1($app_id, $request_body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MetricsApi->listDataSeriesUsingPOST1: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **int**| appId |
+ **request_body** | [**\Swagger\Client\Model\DataSeriesRequest**](../Model/DataSeriesRequest.md)| Metric data points request |
+
+### Return type
+
+[**\Swagger\Client\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **listFiltersUsingPOST**
+> \Swagger\Client\Model\GenericApiResponse listFiltersUsingPOST($app_id, $request_body)
+
+Get metrics filters and their values for an app
+
+Default value of interval is 5m
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$apiInstance = new Swagger\Client\Api\MetricsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = 789; // int | appId
+$request_body = new \Swagger\Client\Model\DataSeriesRequest(); // \Swagger\Client\Model\DataSeriesRequest | Metric filters request
+
+try {
+    $result = $apiInstance->listFiltersUsingPOST($app_id, $request_body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MetricsApi->listFiltersUsingPOST: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **int**| appId |
+ **request_body** | [**\Swagger\Client\Model\DataSeriesRequest**](../Model/DataSeriesRequest.md)| Metric filters request |
+
+### Return type
+
+[**\Swagger\Client\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **listMetricsKeysUsingGET1**
+> \Swagger\Client\Model\GenericApiResponse listMetricsKeysUsingGET1($app_id)
+
+Get metrics keys for an app
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$apiInstance = new Swagger\Client\Api\MetricsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = 789; // int | appId
+
+try {
+    $result = $apiInstance->listMetricsKeysUsingGET1($app_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MetricsApi->listMetricsKeysUsingGET1: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **int**| appId |
+
+### Return type
+
+[**\Swagger\Client\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **listMetricsUsingGET1**
+> \Swagger\Client\Model\GenericApiResponse listMetricsUsingGET1($app_id)
+
+Get metrics info for an app
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$apiInstance = new Swagger\Client\Api\MetricsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$app_id = 789; // int | appId
+
+try {
+    $result = $apiInstance->listMetricsUsingGET1($app_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MetricsApi->listMetricsUsingGET1: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **app_id** | **int**| appId |
+
+### Return type
+
+[**\Swagger\Client\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
