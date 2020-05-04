@@ -1,4 +1,4 @@
-# Swagger\Client\AwsSettingsControllerApi
+# Sematext\STCloud\AwsSettingsControllerApi
 
 All URIs are relative to *https://localhost*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **updateUsingPUT**
-> \Swagger\Client\Model\GenericApiResponse updateUsingPUT($app_id, $dto)
+> \Sematext\STCloud\Model\GenericApiResponse updateUsingPUT($app_id, $dto)
 
 Update App's AWS CloudWatch settings
 
@@ -20,18 +20,18 @@ Applicable only for AWS Apps
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Swagger\Client\Api\AwsSettingsControllerApi(
+$apiInstance = new Sematext\STCloud\Api\AwsSettingsControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $app_id = 789; // int | appId
-$dto = new \Swagger\Client\Model\CloudWatchSettings(); // \Swagger\Client\Model\CloudWatchSettings | dto
+$dto = new \Sematext\STCloud\Model\CloudWatchSettings(); // \Sematext\STCloud\Model\CloudWatchSettings | dto
 
 try {
     $result = $apiInstance->updateUsingPUT($app_id, $dto);
@@ -47,11 +47,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **int**| appId |
- **dto** | [**\Swagger\Client\Model\CloudWatchSettings**](../Model/CloudWatchSettings.md)| dto |
+ **dto** | [**\Sematext\STCloud\Model\CloudWatchSettings**](../Model/CloudWatchSettings.md)| dto |
 
 ### Return type
 
-[**\Swagger\Client\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 

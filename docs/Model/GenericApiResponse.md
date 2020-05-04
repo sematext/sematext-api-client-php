@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data** | **object** | Contains actual data when response is successful. Key and Value is specific to each endpoint | [optional] 
-**errors** | [**\Swagger\Client\Model\Error[]**](Error.md) |  | [optional] 
+**errors** | [**\Sematext\STCloud\Model\Error[]**](Error.md) |  | [optional] 
 **message** | **string** |  | [optional] 
 **success** | **bool** |  | [optional] 
 

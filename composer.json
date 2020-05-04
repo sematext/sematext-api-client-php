@@ -1,5 +1,6 @@
 {
-    "name": "GIT_USER_ID/GIT_REPO_ID",
+    "name": "Sematext/Sematext/STCloud",
+    "version": "0.1.0",
     "description": "",
     "keywords": [
         "swagger",
@@ -28,9 +29,9 @@
         "friendsofphp/php-cs-fixer": "~2.12"
     },
     "autoload": {
-        "psr-4": { "Swagger\\Client\\" : "lib/" }
+        "psr-4": { "Sematext\\STCloud\\" : "stcloud/" }
     },
     "autoload-dev": {
-        "psr-4": { "Swagger\\Client\\" : "test/" }
+        "psr-4": { "Sematext\\STCloud\\" : "test/" }
     }
 }

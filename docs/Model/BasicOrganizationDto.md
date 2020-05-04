@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**auth_methods** | [**\Swagger\Client\Model\BasicAuthMethodDto[]**](BasicAuthMethodDto.md) |  | [optional] 
+**auth_methods** | [**\Sematext\STCloud\Model\BasicAuthMethodDto[]**](BasicAuthMethodDto.md) |  | [optional] 
 **name** | **string** |  | [optional] 
 **status** | **string** |  | [optional] 
 **uuid** | **string** |  | [optional] 

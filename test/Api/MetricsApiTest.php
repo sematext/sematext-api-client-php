@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Sematext\STCloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Swagger\Client;
+namespace Sematext\STCloud;
 
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\ObjectSerializer;
+use \Sematext\STCloud\Configuration;
+use \Sematext\STCloud\ApiException;
+use \Sematext\STCloud\ObjectSerializer;
 
 /**
  * MetricsApiTest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Sematext\STCloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -72,12 +72,12 @@ class MetricsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for listDataSeriesUsingPOST1
+     * Test case for listDataSeriesUsingPOST
      *
      * Get metrics data points for an app.
      *
      */
-    public function testListDataSeriesUsingPOST1()
+    public function testListDataSeriesUsingPOST()
     {
     }
 
@@ -92,22 +92,22 @@ class MetricsApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for listMetricsKeysUsingGET1
+     * Test case for listMetricsKeysUsingGET
      *
      * Get metrics keys for an app.
      *
      */
-    public function testListMetricsKeysUsingGET1()
+    public function testListMetricsKeysUsingGET()
     {
     }
 
     /**
-     * Test case for listMetricsUsingGET1
+     * Test case for listMetricsUsingGET
      *
      * Get metrics info for an app.
      *
      */
-    public function testListMetricsUsingGET1()
+    public function testListMetricsUsingGET()
     {
     }
 }

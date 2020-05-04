@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**app** | [**\Swagger\Client\Model\App**](App.md) | For invite request, only app.id needs to be set. | [optional] 
-**apps** | [**\Swagger\Client\Model\App[]**](App.md) | For invite request, only apps.id needs to be set. | [optional] 
+**app** | [**\Sematext\STCloud\Model\App**](App.md) | For invite request, only app.id needs to be set. | [optional] 
+**apps** | [**\Sematext\STCloud\Model\App[]**](App.md) | For invite request, only apps.id needs to be set. | [optional] 
 **id** | **int** |  | [optional] 
 **invite_date** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **invite_status** | **string** |  | [optional] 

@@ -1,17 +1,17 @@
-# Swagger\Client\MetricsApi
+# Sematext\STCloud\MetricsApi
 
 All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listDataSeriesUsingPOST1**](MetricsApi.md#listDataSeriesUsingPOST1) | **POST** /spm-reports/api/v3/apps/{appId}/metrics/data | Get metrics data points for an app
+[**listDataSeriesUsingPOST**](MetricsApi.md#listDataSeriesUsingPOST) | **POST** /spm-reports/api/v3/apps/{appId}/metrics/data | Get metrics data points for an app
 [**listFiltersUsingPOST**](MetricsApi.md#listFiltersUsingPOST) | **POST** /spm-reports/api/v3/apps/{appId}/metrics/filters | Get metrics filters and their values for an app
-[**listMetricsKeysUsingGET1**](MetricsApi.md#listMetricsKeysUsingGET1) | **GET** /spm-reports/api/v3/apps/{appId}/metrics/keys | Get metrics keys for an app
-[**listMetricsUsingGET1**](MetricsApi.md#listMetricsUsingGET1) | **GET** /spm-reports/api/v3/apps/{appId}/metrics | Get metrics info for an app
+[**listMetricsKeysUsingGET**](MetricsApi.md#listMetricsKeysUsingGET) | **GET** /spm-reports/api/v3/apps/{appId}/metrics/keys | Get metrics keys for an app
+[**listMetricsUsingGET**](MetricsApi.md#listMetricsUsingGET) | **GET** /spm-reports/api/v3/apps/{appId}/metrics | Get metrics info for an app
 
 
-# **listDataSeriesUsingPOST1**
-> \Swagger\Client\Model\GenericApiResponse listDataSeriesUsingPOST1($app_id, $request_body)
+# **listDataSeriesUsingPOST**
+> \Sematext\STCloud\Model\GenericApiResponse listDataSeriesUsingPOST($app_id, $request_body)
 
 Get metrics data points for an app
 
@@ -23,24 +23,24 @@ Default value of interval is 5m
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Swagger\Client\Api\MetricsApi(
+$apiInstance = new Sematext\STCloud\Api\MetricsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $app_id = 789; // int | appId
-$request_body = new \Swagger\Client\Model\DataSeriesRequest(); // \Swagger\Client\Model\DataSeriesRequest | Metric data points request
+$request_body = new \Sematext\STCloud\Model\DataSeriesRequest(); // \Sematext\STCloud\Model\DataSeriesRequest | Metric data points request
 
 try {
-    $result = $apiInstance->listDataSeriesUsingPOST1($app_id, $request_body);
+    $result = $apiInstance->listDataSeriesUsingPOST($app_id, $request_body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MetricsApi->listDataSeriesUsingPOST1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MetricsApi->listDataSeriesUsingPOST: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -50,11 +50,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **int**| appId |
- **request_body** | [**\Swagger\Client\Model\DataSeriesRequest**](../Model/DataSeriesRequest.md)| Metric data points request |
+ **request_body** | [**\Sematext\STCloud\Model\DataSeriesRequest**](../Model/DataSeriesRequest.md)| Metric data points request |
 
 ### Return type
 
-[**\Swagger\Client\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listFiltersUsingPOST**
-> \Swagger\Client\Model\GenericApiResponse listFiltersUsingPOST($app_id, $request_body)
+> \Sematext\STCloud\Model\GenericApiResponse listFiltersUsingPOST($app_id, $request_body)
 
 Get metrics filters and their values for an app
 
@@ -80,18 +80,18 @@ Default value of interval is 5m
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Swagger\Client\Api\MetricsApi(
+$apiInstance = new Sematext\STCloud\Api\MetricsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $app_id = 789; // int | appId
-$request_body = new \Swagger\Client\Model\DataSeriesRequest(); // \Swagger\Client\Model\DataSeriesRequest | Metric filters request
+$request_body = new \Sematext\STCloud\Model\DataSeriesRequest(); // \Sematext\STCloud\Model\DataSeriesRequest | Metric filters request
 
 try {
     $result = $apiInstance->listFiltersUsingPOST($app_id, $request_body);
@@ -107,11 +107,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **int**| appId |
- **request_body** | [**\Swagger\Client\Model\DataSeriesRequest**](../Model/DataSeriesRequest.md)| Metric filters request |
+ **request_body** | [**\Sematext\STCloud\Model\DataSeriesRequest**](../Model/DataSeriesRequest.md)| Metric filters request |
 
 ### Return type
 
-[**\Swagger\Client\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -124,8 +124,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **listMetricsKeysUsingGET1**
-> \Swagger\Client\Model\GenericApiResponse listMetricsKeysUsingGET1($app_id)
+# **listMetricsKeysUsingGET**
+> \Sematext\STCloud\Model\GenericApiResponse listMetricsKeysUsingGET($app_id)
 
 Get metrics keys for an app
 
@@ -135,11 +135,11 @@ Get metrics keys for an app
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Swagger\Client\Api\MetricsApi(
+$apiInstance = new Sematext\STCloud\Api\MetricsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -148,10 +148,10 @@ $apiInstance = new Swagger\Client\Api\MetricsApi(
 $app_id = 789; // int | appId
 
 try {
-    $result = $apiInstance->listMetricsKeysUsingGET1($app_id);
+    $result = $apiInstance->listMetricsKeysUsingGET($app_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MetricsApi->listMetricsKeysUsingGET1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MetricsApi->listMetricsKeysUsingGET: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -177,8 +177,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **listMetricsUsingGET1**
-> \Swagger\Client\Model\GenericApiResponse listMetricsUsingGET1($app_id)
+# **listMetricsUsingGET**
+> \Sematext\STCloud\Model\GenericApiResponse listMetricsUsingGET($app_id)
 
 Get metrics info for an app
 
@@ -188,11 +188,11 @@ Get metrics info for an app
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Swagger\Client\Api\MetricsApi(
+$apiInstance = new Sematext\STCloud\Api\MetricsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -201,10 +201,10 @@ $apiInstance = new Swagger\Client\Api\MetricsApi(
 $app_id = 789; // int | appId
 
 try {
-    $result = $apiInstance->listMetricsUsingGET1($app_id);
+    $result = $apiInstance->listMetricsUsingGET($app_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MetricsApi->listMetricsUsingGET1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MetricsApi->listMetricsUsingGET: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 

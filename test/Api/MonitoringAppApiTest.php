@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Sematext\STCloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Swagger\Client;
+namespace Sematext\STCloud;
 
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\ObjectSerializer;
+use \Sematext\STCloud\Configuration;
+use \Sematext\STCloud\ApiException;
+use \Sematext\STCloud\ObjectSerializer;
 
 /**
  * MonitoringAppApiTest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Sematext\STCloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -72,12 +72,12 @@ class MonitoringAppApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for createSpmApplication
+     * Test case for createSpmApplication1
      *
      * Create Monitoring App.
      *
      */
-    public function testCreateSpmApplication()
+    public function testCreateSpmApplication1()
     {
     }
 }

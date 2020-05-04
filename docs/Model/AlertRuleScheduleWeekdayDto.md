@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **day** | **string** |  | [optional] 
 **index** | **int** |  | [optional] 
-**intervals** | [**\Swagger\Client\Model\AlertRuleScheduleTimeRangeDto[]**](AlertRuleScheduleTimeRangeDto.md) |  | [optional] 
+**intervals** | [**\Sematext\STCloud\Model\AlertRuleScheduleTimeRangeDto[]**](AlertRuleScheduleTimeRangeDto.md) |  | [optional] 
 **label** | **string** |  | [optional] 
 **type** | **string** |  | [optional] 
 

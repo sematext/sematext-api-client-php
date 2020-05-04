@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Sematext\STCloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,17 +26,17 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Swagger\Client;
+namespace Sematext\STCloud;
 
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\ObjectSerializer;
+use \Sematext\STCloud\Configuration;
+use \Sematext\STCloud\ApiException;
+use \Sematext\STCloud\ObjectSerializer;
 
 /**
  * TagApiControllerApiTest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Sematext\STCloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -82,22 +82,22 @@ class TagApiControllerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getUsingGET1
+     *
+     * Gets values for specified tags for the given application identifiers appearing in the given time frame..
+     *
+     */
+    public function testGetUsingGET1()
+    {
+    }
+
+    /**
      * Test case for getUsingGET2
      *
      * Gets values for specified tags for the given application identifiers appearing in the given time frame..
      *
      */
     public function testGetUsingGET2()
-    {
-    }
-
-    /**
-     * Test case for getUsingGET3
-     *
-     * Gets values for specified tags for the given application identifiers appearing in the given time frame..
-     *
-     */
-    public function testGetUsingGET3()
     {
     }
 }

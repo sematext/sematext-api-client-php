@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Sematext\STCloud
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace Sematext\STCloud;
 
 /**
  * UpdateAppInfoTest Class Doc Comment
  *
  * @category    Class
  * @description UpdateAppInfo
- * @package     Swagger\Client
+ * @package     Sematext\STCloud
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
