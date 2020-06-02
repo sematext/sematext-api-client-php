@@ -12,10 +12,6 @@ Further information and API browsing refer to the [Sematext Cloud API web page](
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Prerequisites
-
-* [Placeholder](https://placeholder.org/) - v0.0.0
-
 
 ### Installing
 
