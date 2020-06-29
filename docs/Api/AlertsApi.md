@@ -1,4 +1,4 @@
-# Sematext\STCloud\AlertsApi
+# sematext\stcloud\AlertsApi
 
 All URIs are relative to *https://localhost*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createAlertUsingPOST**
-> \Sematext\STCloud\Model\GenericApiResponse createAlertUsingPOST($dto)
+> \sematext\stcloud\Model\GenericApiResponse createAlertUsingPOST($dto)
 
 Create alert rule
 
@@ -22,17 +22,17 @@ Create alert rule
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\AlertsApi(
+$apiInstance = new sematext\stcloud\Api\AlertsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$dto = new \Sematext\STCloud\Model\AlertRule(); // \Sematext\STCloud\Model\AlertRule | dto
+$dto = new \sematext\stcloud\Model\AlertRule(); // \sematext\stcloud\Model\AlertRule | dto
 
 try {
     $result = $apiInstance->createAlertUsingPOST($dto);
@@ -47,11 +47,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dto** | [**\Sematext\STCloud\Model\AlertRule**](../Model/AlertRule.md)| dto |
+ **dto** | [**\sematext\stcloud\Model\AlertRule**](../Model/AlertRule.md)| dto |
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteAlertRuleUsingDELETE**
-> \Sematext\STCloud\Model\GenericApiResponse deleteAlertRuleUsingDELETE($updateable_alert_id)
+> \sematext\stcloud\Model\GenericApiResponse deleteAlertRuleUsingDELETE($updateable_alert_id)
 
 Delete alert rule
 
@@ -75,11 +75,11 @@ Delete alert rule
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\AlertsApi(
+$apiInstance = new sematext\stcloud\Api\AlertsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **disableAlertRuleUsingPUT**
-> \Sematext\STCloud\Model\GenericApiResponse disableAlertRuleUsingPUT($updateable_alert_id)
+> \sematext\stcloud\Model\GenericApiResponse disableAlertRuleUsingPUT($updateable_alert_id)
 
 Disable alert rule
 
@@ -128,11 +128,11 @@ Disable alert rule
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\AlertsApi(
+$apiInstance = new sematext\stcloud\Api\AlertsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **enableAlertRuleUsingPUT**
-> \Sematext\STCloud\Model\GenericApiResponse enableAlertRuleUsingPUT($updateable_alert_id)
+> \sematext\stcloud\Model\GenericApiResponse enableAlertRuleUsingPUT($updateable_alert_id)
 
 Enable alert rule
 
@@ -181,11 +181,11 @@ Enable alert rule
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\AlertsApi(
+$apiInstance = new sematext\stcloud\Api\AlertsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAlertRulesForAppUsingGET**
-> \Sematext\STCloud\Model\GenericApiResponse getAlertRulesForAppUsingGET($app_id)
+> \sematext\stcloud\Model\GenericApiResponse getAlertRulesForAppUsingGET($app_id)
 
 Get alert rules for an app
 
@@ -234,11 +234,11 @@ Get alert rules for an app
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\AlertsApi(
+$apiInstance = new sematext\stcloud\Api\AlertsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -275,4 +275,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

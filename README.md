@@ -5,7 +5,7 @@ This client code talks to [Sematext Cloud API](https://sematext.com/cloud/) prov
 It's primary purpose is as a client module supporting [Sematext Terraform Provider](https://github.com/sematext/terraform-provider-sematext)
 <br><br>
 
-Further information and API browsing refer to the [Sematext Cloud API web page](https://sematext.com/docs/api/) 
+Further information and API browsing refer to the [Sematext Cloud API web page](https://sematext.com/docs/api/)
 
 
 ## Getting Started
@@ -33,7 +33,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
     }
   ],
   "require": {
-    "/Sematext/STCloud": "*@dev"
+    "/sematext/stcloud": "*@dev"
   }
 }
 ```
@@ -45,7 +45,7 @@ Then run `composer install`
 Download the files and include `autoload.php`:
 
 ```php
-    require_once('/path/to/STCloud/vendor/autoload.php');
+    require_once('/path/to/stcloud/vendor/autoload.php');
 ```
 
 ## Tests
@@ -66,18 +66,18 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\AlertNotificationsApi(
+$apiInstance = new sematext\stcloud\Api\AlertNotificationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $app_id = 789; // int | appId
-$time_interval = new \Sematext\STCloud\Model\AlertNotificationRequest(); // \Sematext\STCloud\Model\AlertNotificationRequest | Time Interval
+$time_interval = new \sematext\stcloud\Model\AlertNotificationRequest(); // \sematext\stcloud\Model\AlertNotificationRequest | Time Interval
 
 try {
     $result = $apiInstance->getAlertNotificationsForAppUsingPOST($app_id, $time_interval);
@@ -101,7 +101,7 @@ The code in this repo uses TODO linting.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 
 ## License

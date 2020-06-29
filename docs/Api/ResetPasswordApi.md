@@ -1,4 +1,4 @@
-# Sematext\STCloud\ResetPasswordApi
+# sematext\stcloud\ResetPasswordApi
 
 All URIs are relative to *https://localhost*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **resetPasswordUsingPOST**
-> \Sematext\STCloud\Model\GenericApiResponse resetPasswordUsingPOST($dto)
+> \sematext\stcloud\Model\GenericApiResponse resetPasswordUsingPOST($dto)
 
 Reset Password
 
@@ -18,17 +18,17 @@ Reset Password
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\ResetPasswordApi(
+$apiInstance = new sematext\stcloud\Api\ResetPasswordApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$dto = new \Sematext\STCloud\Model\UserInfo(); // \Sematext\STCloud\Model\UserInfo | dto
+$dto = new \sematext\stcloud\Model\UserInfo(); // \sematext\stcloud\Model\UserInfo | dto
 
 try {
     $result = $apiInstance->resetPasswordUsingPOST($dto);
@@ -43,11 +43,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dto** | [**\Sematext\STCloud\Model\UserInfo**](../Model/UserInfo.md)| dto |
+ **dto** | [**\sematext\stcloud\Model\UserInfo**](../Model/UserInfo.md)| dto |
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -59,4 +59,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
