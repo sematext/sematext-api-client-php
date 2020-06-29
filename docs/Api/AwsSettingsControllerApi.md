@@ -1,4 +1,4 @@
-# Sematext\STCloud\AwsSettingsControllerApi
+# sematext\stcloud\AwsSettingsControllerApi
 
 All URIs are relative to *https://localhost*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **updateUsingPUT**
-> \Sematext\STCloud\Model\GenericApiResponse updateUsingPUT($app_id, $dto)
+> \sematext\stcloud\Model\GenericApiResponse updateUsingPUT($app_id, $dto)
 
 Update App's AWS CloudWatch settings
 
@@ -20,18 +20,18 @@ Applicable only for AWS Apps
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\AwsSettingsControllerApi(
+$apiInstance = new sematext\stcloud\Api\AwsSettingsControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $app_id = 789; // int | appId
-$dto = new \Sematext\STCloud\Model\CloudWatchSettings(); // \Sematext\STCloud\Model\CloudWatchSettings | dto
+$dto = new \sematext\stcloud\Model\CloudWatchSettings(); // \sematext\stcloud\Model\CloudWatchSettings | dto
 
 try {
     $result = $apiInstance->updateUsingPUT($app_id, $dto);
@@ -47,11 +47,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **int**| appId |
- **dto** | [**\Sematext\STCloud\Model\CloudWatchSettings**](../Model/CloudWatchSettings.md)| dto |
+ **dto** | [**\sematext\stcloud\Model\CloudWatchSettings**](../Model/CloudWatchSettings.md)| dto |
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -63,4 +63,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

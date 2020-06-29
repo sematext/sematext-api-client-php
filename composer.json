@@ -1,6 +1,6 @@
 {
-    "name": "Sematext/STCloud",
-    "version": "0.1.2",
+    "name": "sematext/stcloud",
+    "version": "0.1.3",
     "description": "API client for talking to Sematext Cloud.",
     "keywords": [
         "logging",
@@ -10,7 +10,7 @@
         "api"
     ],
     "homepage": "https://sematext.com",
-    "license": "Apache Version 2.0",
+    "license": "Apache License 2.0",
     "authors": [
         {
             "name": "Sematext",
@@ -30,9 +30,9 @@
         "friendsofphp/php-cs-fixer": "~2.12"
     },
     "autoload": {
-        "psr-4": { "Sematext\\STCloud\\" : "stcloud/" }
+        "psr-4": { "sematext\\stcloud\\" : "stcloud/" }
     },
     "autoload-dev": {
-        "psr-4": { "Sematext\\STCloud\\" : "test/" }
+        "psr-4": { "sematext\\stcloud\\" : "test/" }
     }
 }

@@ -1,4 +1,4 @@
-# Sematext\STCloud\SavedQueriesApi
+# sematext\stcloud\SavedQueriesApi
 
 All URIs are relative to *https://localhost*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **deleteSavedQueryUsingDELETE**
-> \Sematext\STCloud\Model\GenericApiResponse deleteSavedQueryUsingDELETE($updateable_query_id)
+> \sematext\stcloud\Model\GenericApiResponse deleteSavedQueryUsingDELETE($updateable_query_id)
 
 Delete saved query
 
@@ -21,11 +21,11 @@ Delete saved query
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\SavedQueriesApi(
+$apiInstance = new sematext\stcloud\Api\SavedQueriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSavedQueriesForAppUsingGET**
-> \Sematext\STCloud\Model\GenericApiResponse getSavedQueriesForAppUsingGET($app_id)
+> \sematext\stcloud\Model\GenericApiResponse getSavedQueriesForAppUsingGET($app_id)
 
 Get saved queries for an app
 
@@ -74,11 +74,11 @@ Get saved queries for an app
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\SavedQueriesApi(
+$apiInstance = new sematext\stcloud\Api\SavedQueriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **saveQueryUsingPOST**
-> \Sematext\STCloud\Model\GenericApiResponse saveQueryUsingPOST($saved_query_dto)
+> \sematext\stcloud\Model\GenericApiResponse saveQueryUsingPOST($saved_query_dto)
 
 Create saved query
 
@@ -127,17 +127,17 @@ Create saved query
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\SavedQueriesApi(
+$apiInstance = new sematext\stcloud\Api\SavedQueriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$saved_query_dto = new \Sematext\STCloud\Model\SavedQuery(); // \Sematext\STCloud\Model\SavedQuery | savedQueryDto
+$saved_query_dto = new \sematext\stcloud\Model\SavedQuery(); // \sematext\stcloud\Model\SavedQuery | savedQueryDto
 
 try {
     $result = $apiInstance->saveQueryUsingPOST($saved_query_dto);
@@ -152,11 +152,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **saved_query_dto** | [**\Sematext\STCloud\Model\SavedQuery**](../Model/SavedQuery.md)| savedQueryDto |
+ **saved_query_dto** | [**\sematext\stcloud\Model\SavedQuery**](../Model/SavedQuery.md)| savedQueryDto |
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **saveQueryUsingPUT**
-> \Sematext\STCloud\Model\GenericApiResponse saveQueryUsingPUT($saved_query_dto, $updateable_query_id)
+> \sematext\stcloud\Model\GenericApiResponse saveQueryUsingPUT($saved_query_dto, $updateable_query_id)
 
 Update saved query
 
@@ -180,17 +180,17 @@ Update saved query
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\SavedQueriesApi(
+$apiInstance = new sematext\stcloud\Api\SavedQueriesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$saved_query_dto = new \Sematext\STCloud\Model\SavedQuery(); // \Sematext\STCloud\Model\SavedQuery | savedQueryDto
+$saved_query_dto = new \sematext\stcloud\Model\SavedQuery(); // \sematext\stcloud\Model\SavedQuery | savedQueryDto
 $updateable_query_id = 789; // int | updateableQueryId
 
 try {
@@ -206,12 +206,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **saved_query_dto** | [**\Sematext\STCloud\Model\SavedQuery**](../Model/SavedQuery.md)| savedQueryDto |
+ **saved_query_dto** | [**\sematext\stcloud\Model\SavedQuery**](../Model/SavedQuery.md)| savedQueryDto |
  **updateable_query_id** | **int**| updateableQueryId |
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -223,4 +223,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

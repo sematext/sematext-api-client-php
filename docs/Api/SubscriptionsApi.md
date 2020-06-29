@@ -1,4 +1,4 @@
-# Sematext\STCloud\SubscriptionsApi
+# sematext\stcloud\SubscriptionsApi
 
 All URIs are relative to *https://localhost*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **listUsingGET1**
-> \Sematext\STCloud\Model\GenericApiResponse listUsingGET1($app_id)
+> \sematext\stcloud\Model\GenericApiResponse listUsingGET1($app_id)
 
 Get subscriptions for an app
 
@@ -19,11 +19,11 @@ Get subscriptions for an app
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\SubscriptionsApi(
+$apiInstance = new sematext\stcloud\Api\SubscriptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **sendReportUsingPOST**
-> \Sematext\STCloud\Model\GenericApiResponse sendReportUsingPOST($app_id, $email_dto)
+> \sematext\stcloud\Model\GenericApiResponse sendReportUsingPOST($app_id, $email_dto)
 
 Trigger emailing of report for an app
 
@@ -72,18 +72,18 @@ Trigger emailing of report for an app
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\SubscriptionsApi(
+$apiInstance = new sematext\stcloud\Api\SubscriptionsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $app_id = 789; // int | appId
-$email_dto = new \Sematext\STCloud\Model\ReportInfo(); // \Sematext\STCloud\Model\ReportInfo | emailDto
+$email_dto = new \sematext\stcloud\Model\ReportInfo(); // \sematext\stcloud\Model\ReportInfo | emailDto
 
 try {
     $result = $apiInstance->sendReportUsingPOST($app_id, $email_dto);
@@ -99,11 +99,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **int**| appId |
- **email_dto** | [**\Sematext\STCloud\Model\ReportInfo**](../Model/ReportInfo.md)| emailDto |
+ **email_dto** | [**\sematext\stcloud\Model\ReportInfo**](../Model/ReportInfo.md)| emailDto |
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -115,4 +115,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

@@ -1,4 +1,4 @@
-# Sematext\STCloud\MetricsApi
+# sematext\stcloud\MetricsApi
 
 All URIs are relative to *https://localhost*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **listDataSeriesUsingPOST**
-> \Sematext\STCloud\Model\GenericApiResponse listDataSeriesUsingPOST($app_id, $request_body)
+> \sematext\stcloud\Model\GenericApiResponse listDataSeriesUsingPOST($app_id, $request_body)
 
 Get metrics data points for an app
 
@@ -23,18 +23,18 @@ Default value of interval is 5m
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\MetricsApi(
+$apiInstance = new sematext\stcloud\Api\MetricsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $app_id = 789; // int | appId
-$request_body = new \Sematext\STCloud\Model\DataSeriesRequest(); // \Sematext\STCloud\Model\DataSeriesRequest | Metric data points request
+$request_body = new \sematext\stcloud\Model\DataSeriesRequest(); // \sematext\stcloud\Model\DataSeriesRequest | Metric data points request
 
 try {
     $result = $apiInstance->listDataSeriesUsingPOST($app_id, $request_body);
@@ -50,11 +50,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **int**| appId |
- **request_body** | [**\Sematext\STCloud\Model\DataSeriesRequest**](../Model/DataSeriesRequest.md)| Metric data points request |
+ **request_body** | [**\sematext\stcloud\Model\DataSeriesRequest**](../Model/DataSeriesRequest.md)| Metric data points request |
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listFiltersUsingPOST**
-> \Sematext\STCloud\Model\GenericApiResponse listFiltersUsingPOST($app_id, $request_body)
+> \sematext\stcloud\Model\GenericApiResponse listFiltersUsingPOST($app_id, $request_body)
 
 Get metrics filters and their values for an app
 
@@ -80,18 +80,18 @@ Default value of interval is 5m
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\MetricsApi(
+$apiInstance = new sematext\stcloud\Api\MetricsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $app_id = 789; // int | appId
-$request_body = new \Sematext\STCloud\Model\DataSeriesRequest(); // \Sematext\STCloud\Model\DataSeriesRequest | Metric filters request
+$request_body = new \sematext\stcloud\Model\DataSeriesRequest(); // \sematext\stcloud\Model\DataSeriesRequest | Metric filters request
 
 try {
     $result = $apiInstance->listFiltersUsingPOST($app_id, $request_body);
@@ -107,11 +107,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **app_id** | **int**| appId |
- **request_body** | [**\Sematext\STCloud\Model\DataSeriesRequest**](../Model/DataSeriesRequest.md)| Metric filters request |
+ **request_body** | [**\sematext\stcloud\Model\DataSeriesRequest**](../Model/DataSeriesRequest.md)| Metric filters request |
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listMetricsKeysUsingGET**
-> \Sematext\STCloud\Model\GenericApiResponse listMetricsKeysUsingGET($app_id)
+> \sematext\stcloud\Model\GenericApiResponse listMetricsKeysUsingGET($app_id)
 
 Get metrics keys for an app
 
@@ -135,11 +135,11 @@ Get metrics keys for an app
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\MetricsApi(
+$apiInstance = new sematext\stcloud\Api\MetricsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listMetricsUsingGET**
-> \Sematext\STCloud\Model\GenericApiResponse listMetricsUsingGET($app_id)
+> \sematext\stcloud\Model\GenericApiResponse listMetricsUsingGET($app_id)
 
 Get metrics info for an app
 
@@ -188,11 +188,11 @@ Get metrics info for an app
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: api_key
-$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\MetricsApi(
+$apiInstance = new sematext\stcloud\Api\MetricsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
 
 ### Authorization
 
@@ -229,4 +229,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
