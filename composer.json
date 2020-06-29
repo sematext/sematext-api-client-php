@@ -1,15 +1,16 @@
 {
-    "name": "Sematext/Sematext/STCloud",
-    "version": "0.1.0",
-    "description": "",
+    "name": "Sematext/STCloud",
+    "version": "0.1.2",
+    "description": "API client for talking to Sematext Cloud.",
     "keywords": [
-        "swagger",
+        "logging",
+        "monitoring",
         "php",
         "sdk",
         "api"
     ],
-    "homepage": "http://swagger.io",
-    "license": "proprietary",
+    "homepage": "https://sematext.com",
+    "license": "Apache Version 2.0",
     "authors": [
         {
             "name": "Sematext",
