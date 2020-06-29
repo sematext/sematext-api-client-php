@@ -12,8 +12,8 @@
     "license": "proprietary",
     "authors": [
         {
-            "name": "Swagger and contributors",
-            "homepage": "https://github.com/swagger-api/swagger-codegen"
+            "name": "Sematext",
+            "homepage": "https://sematext.com"
         }
     ],
     "require": {
