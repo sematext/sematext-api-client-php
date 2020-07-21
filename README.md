@@ -82,7 +82,7 @@ Download the files and include `autoload.php`:
     require_once('/path/to/stcloud/vendor/autoload.php');
 ```
 
-## Tests
+## Testing
 
 To run the unit tests:
 
