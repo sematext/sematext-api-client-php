@@ -32,7 +32,7 @@ Refer to below link for deeper information on the API itself.
 
 ## Contents
 
-- [&nbsp;&nbsp;sematext-api-client-javascript](#sematext-api-client-javascript)
+- [&nbsp;&nbsp;sematext-api-client-php](#sematext-api-client-php)
   - [Contents](#contents)
   - [Getting Started](#getting-started)
   - [Installation](#installation)
@@ -47,13 +47,12 @@ Refer to below link for deeper information on the API itself.
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 
-### Installing
+## Installation
 
-## Requirements
+### Requirements
 
 PHP 5.5 and later
 
-## Installation
 ### Composer
 
 To install the bindings via [Composer](http://getcomposer.org/), add the following to `composer.json`:
@@ -123,14 +122,10 @@ try {
 ?>
 ```
 
-### Authentication
+## Authentication
 
 This client code requires a Sematext API Access token to function. You can find this by logging into your [Sematext Cloud Account](https://apps.sematext.com/ui/account/api)
 
-
-### Coding style tests
-
-The code in this repo uses TODO linting.
 
 
 ## Versioning
@@ -140,7 +135,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## License
 
-This project is licensed under the Apache License - see the [LICENSE](./LICENSE) file for details
+This project is licensed under the Apache License v2.0- - see the [LICENSE](./LICENSE) file for details
 
 
 ## Acknowledgements
