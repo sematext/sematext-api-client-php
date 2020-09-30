@@ -1,6 +1,6 @@
 {
     "name": "sematext/stcloud",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "API client for talking to Sematext Cloud.",
     "keywords": [
         "logging",
