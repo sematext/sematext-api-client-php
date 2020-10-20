@@ -2,11 +2,11 @@
 
 All URIs are relative to *https://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getDetailedInvoiceUsingGET**](BillingApi.md#getDetailedInvoiceUsingGET) | **GET** /users-web/api/v3/billing/invoice/{service}/{year}/{month} | Get invoice details
-[**listAvailablePlansUsingGET**](BillingApi.md#listAvailablePlansUsingGET) | **GET** /users-web/api/v3/billing/availablePlans | Get available plans
-[**updatePlanUsingPUT**](BillingApi.md#updatePlanUsingPUT) | **PUT** /users-web/api/v3/billing/info/{appId} | Update plan for an app
+| Method                                                                     | HTTP request                                                       | Description            |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------- |
+| [**getDetailedInvoiceUsingGET**](BillingApi.md#getDetailedInvoiceUsingGET) | **GET** /users-web/api/v3/billing/invoice/{service}/{year}/{month} | Get invoice details    |
+| [**listAvailablePlansUsingGET**](BillingApi.md#listAvailablePlansUsingGET) | **GET** /users-web/api/v3/billing/availablePlans                   | Get available plans    |
+| [**updatePlanUsingPUT**](BillingApi.md#updatePlanUsingPUT)                 | **PUT** /users-web/api/v3/billing/info/{appId}                     | Update plan for an app |
 
 
 # **getDetailedInvoiceUsingGET**
@@ -45,11 +45,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **service** | **string**| service |
- **year** | **int**| year |
- **month** | **int**| month |
+| Name        | Type       | Description | Notes |
+| ----------- | ---------- | ----------- | ----- |
+| **service** | **string** | service     |
+| **year**    | **int**    | year        |
+| **month**   | **int**    | month       |
 
 ### Return type
 
@@ -101,10 +101,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **integration_id** | **int**| integrationId | [optional]
- **app_type** | **string**| appType | [optional]
+| Name               | Type       | Description   | Notes      |
+| ------------------ | ---------- | ------------- | ---------- |
+| **integration_id** | **int**    | integrationId | [optional] |
+| **app_type**       | **string** | appType       | [optional] |
 
 ### Return type
 
@@ -156,10 +156,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **int**| appId |
- **dto** | [**\sematext\stcloud\Model\BillingInfo**](../Model/BillingInfo.md)| dto |
+| Name       | Type                                                               | Description | Notes |
+| ---------- | ------------------------------------------------------------------ | ----------- | ----- |
+| **app_id** | **int**                                                            | appId       |
+| **dto**    | [**\sematext\stcloud\Model\BillingInfo**](../Model/BillingInfo.md) | dto         |
 
 ### Return type
 
