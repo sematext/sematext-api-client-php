@@ -2,11 +2,11 @@
 
 All URIs are relative to *https://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getTagNamesUsingGET**](TagApiControllerApi.md#getTagNamesUsingGET) | **GET** /spm-reports/api/v3/apps/{appIds}/tagNames | Gets tag names for the given application identifiers appearing in the given time frame.
-[**getUsingGET1**](TagApiControllerApi.md#getUsingGET1) | **GET** /spm-reports/api/v3/apps/{appIds}/tags | Gets values for specified tags for the given application identifiers appearing in the given time frame.
-[**getUsingGET2**](TagApiControllerApi.md#getUsingGET2) | **GET** /spm-reports/api/v3/apps/{appIds}/metrics/filters | Gets values for specified tags for the given application identifiers appearing in the given time frame.
+| Method                                                                | HTTP request                                              | Description                                                                                             |
+| --------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [**getTagNamesUsingGET**](TagApiControllerApi.md#getTagNamesUsingGET) | **GET** /spm-reports/api/v3/apps/{appIds}/tagNames        | Gets tag names for the given application identifiers appearing in the given time frame.                 |
+| [**getUsingGET1**](TagApiControllerApi.md#getUsingGET1)               | **GET** /spm-reports/api/v3/apps/{appIds}/tags            | Gets values for specified tags for the given application identifiers appearing in the given time frame. |
+| [**getUsingGET2**](TagApiControllerApi.md#getUsingGET2)               | **GET** /spm-reports/api/v3/apps/{appIds}/metrics/filters | Gets values for specified tags for the given application identifiers appearing in the given time frame. |
 
 
 # **getTagNamesUsingGET**
@@ -49,15 +49,15 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_ids** | **string**| appIds |
- **from** | **int**| from | [optional]
- **to** | **int**| to | [optional]
- **metrics** | **bool**| metrics | [optional] [default to true]
- **logs** | **bool**| logs | [optional] [default to true]
- **events** | **bool**| events | [optional] [default to false]
- **rum** | **bool**| rum | [optional] [default to true]
+| Name        | Type       | Description | Notes                         |
+| ----------- | ---------- | ----------- | ----------------------------- |
+| **app_ids** | **string** | appIds      |
+| **from**    | **int**    | from        | [optional]                    |
+| **to**      | **int**    | to          | [optional]                    |
+| **metrics** | **bool**   | metrics     | [optional] [default to true]  |
+| **logs**    | **bool**   | logs        | [optional] [default to true]  |
+| **events**  | **bool**   | events      | [optional] [default to false] |
+| **rum**     | **bool**   | rum         | [optional] [default to true]  |
 
 ### Return type
 
@@ -115,16 +115,16 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_ids** | **string**| appIds |
- **tag** | [**string[]**](../Model/string.md)| tag |
- **from** | **int**| from | [optional]
- **to** | **int**| to | [optional]
- **metrics** | **bool**| metrics | [optional] [default to true]
- **logs** | **bool**| logs | [optional] [default to true]
- **events** | **bool**| events | [optional] [default to false]
- **rum** | **bool**| rum | [optional] [default to true]
+| Name        | Type                               | Description | Notes                         |
+| ----------- | ---------------------------------- | ----------- | ----------------------------- |
+| **app_ids** | **string**                         | appIds      |
+| **tag**     | [**string[]**](../Model/string.md) | tag         |
+| **from**    | **int**                            | from        | [optional]                    |
+| **to**      | **int**                            | to          | [optional]                    |
+| **metrics** | **bool**                           | metrics     | [optional] [default to true]  |
+| **logs**    | **bool**                           | logs        | [optional] [default to true]  |
+| **events**  | **bool**                           | events      | [optional] [default to false] |
+| **rum**     | **bool**                           | rum         | [optional] [default to true]  |
 
 ### Return type
 
@@ -182,16 +182,16 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_ids** | **string**| appIds |
- **tag** | [**string[]**](../Model/string.md)| tag |
- **from** | **int**| from | [optional]
- **to** | **int**| to | [optional]
- **metrics** | **bool**| metrics | [optional] [default to true]
- **logs** | **bool**| logs | [optional] [default to true]
- **events** | **bool**| events | [optional] [default to false]
- **rum** | **bool**| rum | [optional] [default to true]
+| Name        | Type                               | Description | Notes                         |
+| ----------- | ---------------------------------- | ----------- | ----------------------------- |
+| **app_ids** | **string**                         | appIds      |
+| **tag**     | [**string[]**](../Model/string.md) | tag         |
+| **from**    | **int**                            | from        | [optional]                    |
+| **to**      | **int**                            | to          | [optional]                    |
+| **metrics** | **bool**                           | metrics     | [optional] [default to true]  |
+| **logs**    | **bool**                           | logs        | [optional] [default to true]  |
+| **events**  | **bool**                           | events      | [optional] [default to false] |
+| **rum**     | **bool**                           | rum         | [optional] [default to true]  |
 
 ### Return type
 

@@ -2,10 +2,10 @@
 
 All URIs are relative to *https://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**listUsingGET1**](SubscriptionsApi.md#listUsingGET1) | **GET** /users-web/api/v3/apps/{appId}/subscriptions | Get subscriptions for an app
-[**sendReportUsingPOST**](SubscriptionsApi.md#sendReportUsingPOST) | **POST** /users-web/api/v3/apps/{appId}/report/send | Trigger emailing of report for an app
+| Method                                                             | HTTP request                                         | Description                           |
+| ------------------------------------------------------------------ | ---------------------------------------------------- | ------------------------------------- |
+| [**listUsingGET1**](SubscriptionsApi.md#listUsingGET1)             | **GET** /users-web/api/v3/apps/{appId}/subscriptions | Get subscriptions for an app          |
+| [**sendReportUsingPOST**](SubscriptionsApi.md#sendReportUsingPOST) | **POST** /users-web/api/v3/apps/{appId}/report/send  | Trigger emailing of report for an app |
 
 
 # **listUsingGET1**
@@ -42,9 +42,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **int**| appId |
+| Name       | Type    | Description | Notes |
+| ---------- | ------- | ----------- | ----- |
+| **app_id** | **int** | appId       |
 
 ### Return type
 
@@ -96,10 +96,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **int**| appId |
- **email_dto** | [**\sematext\stcloud\Model\ReportInfo**](../Model/ReportInfo.md)| emailDto |
+| Name          | Type                                                             | Description | Notes |
+| ------------- | ---------------------------------------------------------------- | ----------- | ----- |
+| **app_id**    | **int**                                                          | appId       |
+| **email_dto** | [**\sematext\stcloud\Model\ReportInfo**](../Model/ReportInfo.md) | emailDto    |
 
 ### Return type
 

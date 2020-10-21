@@ -2,12 +2,12 @@
 
 All URIs are relative to *https://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**deleteSavedQueryUsingDELETE**](SavedQueriesApi.md#deleteSavedQueryUsingDELETE) | **DELETE** /users-web/api/v3/savedQueries/{updateableQueryId} | Delete saved query
-[**getSavedQueriesForAppUsingGET**](SavedQueriesApi.md#getSavedQueriesForAppUsingGET) | **GET** /users-web/api/v3/apps/{appId}/savedQueries | Get saved queries for an app
-[**saveQueryUsingPOST**](SavedQueriesApi.md#saveQueryUsingPOST) | **POST** /users-web/api/v3/savedQueries | Create saved query
-[**saveQueryUsingPUT**](SavedQueriesApi.md#saveQueryUsingPUT) | **PUT** /users-web/api/v3/savedQueries/{updateableQueryId} | Update saved query
+| Method                                                                                | HTTP request                                                  | Description                  |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------- | ---------------------------- |
+| [**deleteSavedQueryUsingDELETE**](SavedQueriesApi.md#deleteSavedQueryUsingDELETE)     | **DELETE** /users-web/api/v3/savedQueries/{updateableQueryId} | Delete saved query           |
+| [**getSavedQueriesForAppUsingGET**](SavedQueriesApi.md#getSavedQueriesForAppUsingGET) | **GET** /users-web/api/v3/apps/{appId}/savedQueries           | Get saved queries for an app |
+| [**saveQueryUsingPOST**](SavedQueriesApi.md#saveQueryUsingPOST)                       | **POST** /users-web/api/v3/savedQueries                       | Create saved query           |
+| [**saveQueryUsingPUT**](SavedQueriesApi.md#saveQueryUsingPUT)                         | **PUT** /users-web/api/v3/savedQueries/{updateableQueryId}    | Update saved query           |
 
 
 # **deleteSavedQueryUsingDELETE**
@@ -44,9 +44,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **updateable_query_id** | **int**| updateableQueryId |
+| Name                    | Type    | Description       | Notes |
+| ----------------------- | ------- | ----------------- | ----- |
+| **updateable_query_id** | **int** | updateableQueryId |
 
 ### Return type
 
@@ -97,9 +97,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **int**| appId |
+| Name       | Type    | Description | Notes |
+| ---------- | ------- | ----------- | ----- |
+| **app_id** | **int** | appId       |
 
 ### Return type
 
@@ -150,9 +150,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **saved_query_dto** | [**\sematext\stcloud\Model\SavedQuery**](../Model/SavedQuery.md)| savedQueryDto |
+| Name                | Type                                                             | Description   | Notes |
+| ------------------- | ---------------------------------------------------------------- | ------------- | ----- |
+| **saved_query_dto** | [**\sematext\stcloud\Model\SavedQuery**](../Model/SavedQuery.md) | savedQueryDto |
 
 ### Return type
 
@@ -204,10 +204,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **saved_query_dto** | [**\sematext\stcloud\Model\SavedQuery**](../Model/SavedQuery.md)| savedQueryDto |
- **updateable_query_id** | **int**| updateableQueryId |
+| Name                    | Type                                                             | Description       | Notes |
+| ----------------------- | ---------------------------------------------------------------- | ----------------- | ----- |
+| **saved_query_dto**     | [**\sematext\stcloud\Model\SavedQuery**](../Model/SavedQuery.md) | savedQueryDto     |
+| **updateable_query_id** | **int**                                                          | updateableQueryId |
 
 ### Return type
 

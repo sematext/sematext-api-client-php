@@ -2,9 +2,9 @@
 
 All URIs are relative to *https://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createLogseneApplication**](LogsAppApi.md#createLogseneApplication) | **POST** /logsene-reports/api/v3/apps | Create Logs App
+| Method                                                                 | HTTP request                          | Description     |
+| ---------------------------------------------------------------------- | ------------------------------------- | --------------- |
+| [**createLogseneApplication**](LogsAppApi.md#createLogseneApplication) | **POST** /logsene-reports/api/v3/apps | Create Logs App |
 
 
 # **createLogseneApplication**
@@ -41,9 +41,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **application_details** | [**\sematext\stcloud\Model\CreateAppInfo**](../Model/CreateAppInfo.md)| Details of the application to be created |
+| Name                    | Type                                                                   | Description                              | Notes |
+| ----------------------- | ---------------------------------------------------------------------- | ---------------------------------------- | ----- |
+| **application_details** | [**\sematext\stcloud\Model\CreateAppInfo**](../Model/CreateAppInfo.md) | Details of the application to be created |
 
 ### Return type
 
