@@ -67,23 +67,27 @@ class App implements ModelInterface, ArrayAccess
         'display_status' => 'string',
         'first_data_saved_date' => 'int',
         'id' => 'int',
-        'integration' => '\sematext\stcloud\Model\ServiceIntegration',
+        'integration' => '\Sematext\STCloud\Model\ServiceIntegration',
         'last_data_received_date' => 'int',
         'last_data_saved_date' => 'int',
         'logged_in_user_app_role' => 'string',
         'monthly_invoice_account' => 'bool',
         'name' => 'string',
         'owner_email' => 'string',
-        'owning_organization' => '\sematext\stcloud\Model\BasicOrganizationDto',
+        'owning_organization' => '\Sematext\STCloud\Model\BasicOrganizationDto',
         'page_load_threshold' => 'int',
         'payment_method_id' => 'int',
-        'plan' => '\sematext\stcloud\Model\Plan',
+        'plan' => '\Sematext\STCloud\Model\Plan',
         'prepaid_account' => 'bool',
+        'read_token' => 'string',
+        'read_write_token' => 'string',
+        'registration_date' => 'int',
         'status' => 'string',
         'token' => 'string',
         'trial_end_date' => 'int',
         'url_group_limit' => 'int',
-        'user_roles' => '\sematext\stcloud\Model\UserRole[]'
+        'user_roles' => '\Sematext\STCloud\Model\UserRole[]',
+        'write_token' => 'string'
     ];
 
     /**
@@ -114,11 +118,15 @@ class App implements ModelInterface, ArrayAccess
         'payment_method_id' => 'int64',
         'plan' => null,
         'prepaid_account' => null,
+        'read_token' => null,
+        'read_write_token' => null,
+        'registration_date' => 'int64',
         'status' => null,
         'token' => null,
         'trial_end_date' => 'int64',
         'url_group_limit' => 'int32',
-        'user_roles' => null
+        'user_roles' => null,
+        'write_token' => null
     ];
 
     /**
@@ -170,11 +178,15 @@ class App implements ModelInterface, ArrayAccess
         'payment_method_id' => 'paymentMethodId',
         'plan' => 'plan',
         'prepaid_account' => 'prepaidAccount',
+        'read_token' => 'readToken',
+        'read_write_token' => 'readWriteToken',
+        'registration_date' => 'registrationDate',
         'status' => 'status',
         'token' => 'token',
         'trial_end_date' => 'trialEndDate',
         'url_group_limit' => 'urlGroupLimit',
-        'user_roles' => 'userRoles'
+        'user_roles' => 'userRoles',
+        'write_token' => 'writeToken'
     ];
 
     /**
@@ -205,11 +217,15 @@ class App implements ModelInterface, ArrayAccess
         'payment_method_id' => 'setPaymentMethodId',
         'plan' => 'setPlan',
         'prepaid_account' => 'setPrepaidAccount',
+        'read_token' => 'setReadToken',
+        'read_write_token' => 'setReadWriteToken',
+        'registration_date' => 'setRegistrationDate',
         'status' => 'setStatus',
         'token' => 'setToken',
         'trial_end_date' => 'setTrialEndDate',
         'url_group_limit' => 'setUrlGroupLimit',
-        'user_roles' => 'setUserRoles'
+        'user_roles' => 'setUserRoles',
+        'write_token' => 'setWriteToken'
     ];
 
     /**
@@ -240,11 +256,15 @@ class App implements ModelInterface, ArrayAccess
         'payment_method_id' => 'getPaymentMethodId',
         'plan' => 'getPlan',
         'prepaid_account' => 'getPrepaidAccount',
+        'read_token' => 'getReadToken',
+        'read_write_token' => 'getReadWriteToken',
+        'registration_date' => 'getRegistrationDate',
         'status' => 'getStatus',
         'token' => 'getToken',
         'trial_end_date' => 'getTrialEndDate',
         'url_group_limit' => 'getUrlGroupLimit',
-        'user_roles' => 'getUserRoles'
+        'user_roles' => 'getUserRoles',
+        'write_token' => 'getWriteToken'
     ];
 
     /**
@@ -329,11 +349,15 @@ class App implements ModelInterface, ArrayAccess
         $this->container['payment_method_id'] = isset($data['payment_method_id']) ? $data['payment_method_id'] : null;
         $this->container['plan'] = isset($data['plan']) ? $data['plan'] : null;
         $this->container['prepaid_account'] = isset($data['prepaid_account']) ? $data['prepaid_account'] : null;
+        $this->container['read_token'] = isset($data['read_token']) ? $data['read_token'] : null;
+        $this->container['read_write_token'] = isset($data['read_write_token']) ? $data['read_write_token'] : null;
+        $this->container['registration_date'] = isset($data['registration_date']) ? $data['registration_date'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['token'] = isset($data['token']) ? $data['token'] : null;
         $this->container['trial_end_date'] = isset($data['trial_end_date']) ? $data['trial_end_date'] : null;
         $this->container['url_group_limit'] = isset($data['url_group_limit']) ? $data['url_group_limit'] : null;
         $this->container['user_roles'] = isset($data['user_roles']) ? $data['user_roles'] : null;
+        $this->container['write_token'] = isset($data['write_token']) ? $data['write_token'] : null;
     }
 
     /**
@@ -603,7 +627,7 @@ class App implements ModelInterface, ArrayAccess
     /**
      * Gets integration
      *
-     * @return \sematext\stcloud\Model\ServiceIntegration
+     * @return \Sematext\STCloud\Model\ServiceIntegration
      */
     public function getIntegration()
     {
@@ -613,7 +637,7 @@ class App implements ModelInterface, ArrayAccess
     /**
      * Sets integration
      *
-     * @param \sematext\stcloud\Model\ServiceIntegration $integration integration
+     * @param \Sematext\STCloud\Model\ServiceIntegration $integration integration
      *
      * @return $this
      */
@@ -771,7 +795,7 @@ class App implements ModelInterface, ArrayAccess
     /**
      * Gets owning_organization
      *
-     * @return \sematext\stcloud\Model\BasicOrganizationDto
+     * @return \Sematext\STCloud\Model\BasicOrganizationDto
      */
     public function getOwningOrganization()
     {
@@ -781,7 +805,7 @@ class App implements ModelInterface, ArrayAccess
     /**
      * Sets owning_organization
      *
-     * @param \sematext\stcloud\Model\BasicOrganizationDto $owning_organization owning_organization
+     * @param \Sematext\STCloud\Model\BasicOrganizationDto $owning_organization owning_organization
      *
      * @return $this
      */
@@ -843,7 +867,7 @@ class App implements ModelInterface, ArrayAccess
     /**
      * Gets plan
      *
-     * @return \sematext\stcloud\Model\Plan
+     * @return \Sematext\STCloud\Model\Plan
      */
     public function getPlan()
     {
@@ -853,7 +877,7 @@ class App implements ModelInterface, ArrayAccess
     /**
      * Sets plan
      *
-     * @param \sematext\stcloud\Model\Plan $plan plan
+     * @param \Sematext\STCloud\Model\Plan $plan plan
      *
      * @return $this
      */
@@ -884,6 +908,78 @@ class App implements ModelInterface, ArrayAccess
     public function setPrepaidAccount($prepaid_account)
     {
         $this->container['prepaid_account'] = $prepaid_account;
+
+        return $this;
+    }
+
+    /**
+     * Gets read_token
+     *
+     * @return string
+     */
+    public function getReadToken()
+    {
+        return $this->container['read_token'];
+    }
+
+    /**
+     * Sets read_token
+     *
+     * @param string $read_token read_token
+     *
+     * @return $this
+     */
+    public function setReadToken($read_token)
+    {
+        $this->container['read_token'] = $read_token;
+
+        return $this;
+    }
+
+    /**
+     * Gets read_write_token
+     *
+     * @return string
+     */
+    public function getReadWriteToken()
+    {
+        return $this->container['read_write_token'];
+    }
+
+    /**
+     * Sets read_write_token
+     *
+     * @param string $read_write_token read_write_token
+     *
+     * @return $this
+     */
+    public function setReadWriteToken($read_write_token)
+    {
+        $this->container['read_write_token'] = $read_write_token;
+
+        return $this;
+    }
+
+    /**
+     * Gets registration_date
+     *
+     * @return int
+     */
+    public function getRegistrationDate()
+    {
+        return $this->container['registration_date'];
+    }
+
+    /**
+     * Sets registration_date
+     *
+     * @param int $registration_date registration_date
+     *
+     * @return $this
+     */
+    public function setRegistrationDate($registration_date)
+    {
+        $this->container['registration_date'] = $registration_date;
 
         return $this;
     }
@@ -987,7 +1083,7 @@ class App implements ModelInterface, ArrayAccess
     /**
      * Gets user_roles
      *
-     * @return \sematext\stcloud\Model\UserRole[]
+     * @return \Sematext\STCloud\Model\UserRole[]
      */
     public function getUserRoles()
     {
@@ -997,13 +1093,37 @@ class App implements ModelInterface, ArrayAccess
     /**
      * Sets user_roles
      *
-     * @param \sematext\stcloud\Model\UserRole[] $user_roles user_roles
+     * @param \Sematext\STCloud\Model\UserRole[] $user_roles user_roles
      *
      * @return $this
      */
     public function setUserRoles($user_roles)
     {
         $this->container['user_roles'] = $user_roles;
+
+        return $this;
+    }
+
+    /**
+     * Gets write_token
+     *
+     * @return string
+     */
+    public function getWriteToken()
+    {
+        return $this->container['write_token'];
+    }
+
+    /**
+     * Sets write_token
+     *
+     * @param string $write_token write_token
+     *
+     * @return $this
+     */
+    public function setWriteToken($write_token)
+    {
+        $this->container['write_token'] = $write_token;
 
         return $this;
     }

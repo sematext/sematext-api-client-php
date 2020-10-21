@@ -2,9 +2,9 @@
 
 All URIs are relative to *https://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**resetPasswordUsingPOST**](ResetPasswordApi.md#resetPasswordUsingPOST) | **POST** /users-web/api/v3/account/password/reset | Reset Password
+| Method                                                                   | HTTP request                                      | Description    |
+| ------------------------------------------------------------------------ | ------------------------------------------------- | -------------- |
+| [**resetPasswordUsingPOST**](ResetPasswordApi.md#resetPasswordUsingPOST) | **POST** /users-web/api/v3/account/password/reset | Reset Password |
 
 
 # **resetPasswordUsingPOST**
@@ -41,9 +41,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dto** | [**\sematext\stcloud\Model\UserInfo**](../Model/UserInfo.md)| dto |
+| Name    | Type                                                         | Description | Notes |
+| ------- | ------------------------------------------------------------ | ----------- | ----- |
+| **dto** | [**\sematext\stcloud\Model\UserInfo**](../Model/UserInfo.md) | dto         |
 
 ### Return type
 
