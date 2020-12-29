@@ -72,12 +72,12 @@ class TokensApiControllerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for createAppToken
+     * Test case for createAppToken1
      *
      * Create new app token.
      *
      */
-    public function testCreateAppToken()
+    public function testCreateAppToken1()
     {
     }
 
@@ -92,32 +92,32 @@ class TokensApiControllerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for getAppTokens1
+     * Test case for getAppTokens
      *
      * Get app available tokens.
      *
      */
-    public function testGetAppTokens1()
+    public function testGetAppTokens()
     {
     }
 
     /**
-     * Test case for regenerateAppToken
+     * Test case for regenerateAppToken1
      *
      * Regenerate app token).
      *
      */
-    public function testRegenerateAppToken()
+    public function testRegenerateAppToken1()
     {
     }
 
     /**
-     * Test case for updateAppToken1
+     * Test case for updateAppToken
      *
-     * Update app token (enable/disable).
+     * Update app token (enable/disable or name).
      *
      */
-    public function testUpdateAppToken1()
+    public function testUpdateAppToken()
     {
     }
 }
