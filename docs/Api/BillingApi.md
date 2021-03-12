@@ -2,11 +2,11 @@
 
 All URIs are relative to */*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getDetailedInvoiceUsingGET**](BillingApi.md#getdetailedinvoiceusingget) | **GET** /users-web/api/v3/billing/invoice/{service}/{year}/{month} | Get invoice details
-[**listAvailablePlansUsingGET**](BillingApi.md#listavailableplansusingget) | **GET** /users-web/api/v3/billing/availablePlans | Get available plans
-[**updatePlanUsingPUT**](BillingApi.md#updateplanusingput) | **PUT** /users-web/api/v3/billing/info/{appId} | Update plan for an app
+| Method                                                                     | HTTP request                                                       | Description            |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------- |
+| [**getDetailedInvoiceUsingGET**](BillingApi.md#getdetailedinvoiceusingget) | **GET** /users-web/api/v3/billing/invoice/{service}/{year}/{month} | Get invoice details    |
+| [**listAvailablePlansUsingGET**](BillingApi.md#listavailableplansusingget) | **GET** /users-web/api/v3/billing/availablePlans                   | Get available plans    |
+| [**updatePlanUsingPUT**](BillingApi.md#updateplanusingput)                 | **PUT** /users-web/api/v3/billing/info/{appId}                     | Update plan for an app |
 
 # **getDetailedInvoiceUsingGET**
 > \Sematext\STCloud\Model\InvoiceResponse getDetailedInvoiceUsingGET($service, $year, $month)
@@ -43,11 +43,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **service** | **string**| service |
- **year** | **int**| year |
- **month** | **int**| month |
+| Name        | Type       | Description | Notes |
+| ----------- | ---------- | ----------- | ----- |
+| **service** | **string** | service     |
+| **year**    | **int**    | year        |
+| **month**   | **int**    | month       |
 
 ### Return type
 
@@ -98,10 +98,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **integration_id** | **int**| integrationId | [optional]
- **app_type** | **string**| appType | [optional]
+| Name               | Type       | Description   | Notes      |
+| ------------------ | ---------- | ------------- | ---------- |
+| **integration_id** | **int**    | integrationId | [optional] |
+| **app_type**       | **string** | appType       | [optional] |
 
 ### Return type
 
@@ -152,10 +152,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Sematext\STCloud\Model\BillingInfo**](../Model/BillingInfo.md)| dto |
- **app_id** | **int**| appId |
+| Name       | Type                                                               | Description | Notes |
+| ---------- | ------------------------------------------------------------------ | ----------- | ----- |
+| **body**   | [**\Sematext\STCloud\Model\BillingInfo**](../Model/BillingInfo.md) | dto         |
+| **app_id** | **int**                                                            | appId       |
 
 ### Return type
 
@@ -171,4 +171,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

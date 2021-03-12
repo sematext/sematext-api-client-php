@@ -2,13 +2,13 @@
 
 All URIs are relative to */*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createAlertUsingPOST1**](AlertsApi.md#createalertusingpost1) | **POST** /users-web/api/v3/alerts | Create alert rule
-[**deleteAlertRuleUsingDELETE1**](AlertsApi.md#deletealertruleusingdelete1) | **DELETE** /users-web/api/v3/alerts/{updateableAlertId} | Delete alert rule
-[**disableAlertRuleUsingPUT1**](AlertsApi.md#disablealertruleusingput1) | **PUT** /users-web/api/v3/alerts/{updateableAlertId}/disable | Disable alert rule
-[**enableAlertRuleUsingPUT1**](AlertsApi.md#enablealertruleusingput1) | **PUT** /users-web/api/v3/alerts/{updateableAlertId}/enable | Enable alert rule
-[**getAlertRulesForAppUsingGET**](AlertsApi.md#getalertrulesforappusingget) | **GET** /users-web/api/v3/apps/{appId}/alerts | Get alert rules for an app
+| Method                                                                      | HTTP request                                                 | Description                |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------ | -------------------------- |
+| [**createAlertUsingPOST1**](AlertsApi.md#createalertusingpost1)             | **POST** /users-web/api/v3/alerts                            | Create alert rule          |
+| [**deleteAlertRuleUsingDELETE1**](AlertsApi.md#deletealertruleusingdelete1) | **DELETE** /users-web/api/v3/alerts/{updateableAlertId}      | Delete alert rule          |
+| [**disableAlertRuleUsingPUT1**](AlertsApi.md#disablealertruleusingput1)     | **PUT** /users-web/api/v3/alerts/{updateableAlertId}/disable | Disable alert rule         |
+| [**enableAlertRuleUsingPUT1**](AlertsApi.md#enablealertruleusingput1)       | **PUT** /users-web/api/v3/alerts/{updateableAlertId}/enable  | Enable alert rule          |
+| [**getAlertRulesForAppUsingGET**](AlertsApi.md#getalertrulesforappusingget) | **GET** /users-web/api/v3/apps/{appId}/alerts                | Get alert rules for an app |
 
 # **createAlertUsingPOST1**
 > \Sematext\STCloud\Model\AlertRuleResponse createAlertUsingPOST1($body)
@@ -43,9 +43,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Sematext\STCloud\Model\AlertRule**](../Model/AlertRule.md)| dto |
+| Name     | Type                                                           | Description | Notes |
+| -------- | -------------------------------------------------------------- | ----------- | ----- |
+| **body** | [**\Sematext\STCloud\Model\AlertRule**](../Model/AlertRule.md) | dto         |
 
 ### Return type
 
@@ -95,9 +95,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **updateable_alert_id** | **int**| updateableAlertId |
+| Name                    | Type    | Description       | Notes |
+| ----------------------- | ------- | ----------------- | ----- |
+| **updateable_alert_id** | **int** | updateableAlertId |
 
 ### Return type
 
@@ -147,9 +147,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **updateable_alert_id** | **int**| updateableAlertId |
+| Name                    | Type    | Description       | Notes |
+| ----------------------- | ------- | ----------------- | ----- |
+| **updateable_alert_id** | **int** | updateableAlertId |
 
 ### Return type
 
@@ -199,9 +199,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **updateable_alert_id** | **int**| updateableAlertId |
+| Name                    | Type    | Description       | Notes |
+| ----------------------- | ------- | ----------------- | ----- |
+| **updateable_alert_id** | **int** | updateableAlertId |
 
 ### Return type
 
@@ -251,9 +251,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **int**| appId |
+| Name       | Type    | Description | Notes |
+| ---------- | ------- | ----------- | ----- |
+| **app_id** | **int** | appId       |
 
 ### Return type
 
@@ -269,4 +269,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

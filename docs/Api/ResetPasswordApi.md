@@ -2,9 +2,9 @@
 
 All URIs are relative to */*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**resetPasswordUsingPOST**](ResetPasswordApi.md#resetpasswordusingpost) | **POST** /users-web/api/v3/account/password/reset | Reset Password
+| Method                                                                   | HTTP request                                      | Description    |
+| ------------------------------------------------------------------------ | ------------------------------------------------- | -------------- |
+| [**resetPasswordUsingPOST**](ResetPasswordApi.md#resetpasswordusingpost) | **POST** /users-web/api/v3/account/password/reset | Reset Password |
 
 # **resetPasswordUsingPOST**
 > \Sematext\STCloud\Model\GenericMapBasedApiResponse resetPasswordUsingPOST($body)
@@ -39,9 +39,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Sematext\STCloud\Model\UserInfo**](../Model/UserInfo.md)| dto |
+| Name     | Type                                                         | Description | Notes |
+| -------- | ------------------------------------------------------------ | ----------- | ----- |
+| **body** | [**\Sematext\STCloud\Model\UserInfo**](../Model/UserInfo.md) | dto         |
 
 ### Return type
 
@@ -57,4 +57,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

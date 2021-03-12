@@ -2,10 +2,10 @@
 
 All URIs are relative to */*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getAlertNotificationsForAppUsingPOST**](AlertNotificationsApi.md#getalertnotificationsforappusingpost) | **POST** /users-web/api/v3/apps/{appId}/notifications/alerts | Get alert notifications for an app
-[**getAlertNotificationsForUserUsingPOST**](AlertNotificationsApi.md#getalertnotificationsforuserusingpost) | **POST** /users-web/api/v3/notifications/alerts | Get alert notifications for a user
+| Method                                                                                                      | HTTP request                                                 | Description                        |
+| ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------- |
+| [**getAlertNotificationsForAppUsingPOST**](AlertNotificationsApi.md#getalertnotificationsforappusingpost)   | **POST** /users-web/api/v3/apps/{appId}/notifications/alerts | Get alert notifications for an app |
+| [**getAlertNotificationsForUserUsingPOST**](AlertNotificationsApi.md#getalertnotificationsforuserusingpost) | **POST** /users-web/api/v3/notifications/alerts              | Get alert notifications for a user |
 
 # **getAlertNotificationsForAppUsingPOST**
 > \Sematext\STCloud\Model\NotificationsResponse getAlertNotificationsForAppUsingPOST($body, $app_id)
@@ -43,10 +43,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Sematext\STCloud\Model\AlertNotificationRequest**](../Model/AlertNotificationRequest.md)| Time Interval |
- **app_id** | **int**| appId |
+| Name       | Type                                                                                         | Description   | Notes |
+| ---------- | -------------------------------------------------------------------------------------------- | ------------- | ----- |
+| **body**   | [**\Sematext\STCloud\Model\AlertNotificationRequest**](../Model/AlertNotificationRequest.md) | Time Interval |
+| **app_id** | **int**                                                                                      | appId         |
 
 ### Return type
 
@@ -98,9 +98,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Sematext\STCloud\Model\AlertNotificationRequest**](../Model/AlertNotificationRequest.md)| Time Interval |
+| Name     | Type                                                                                         | Description   | Notes |
+| -------- | -------------------------------------------------------------------------------------------- | ------------- | ----- |
+| **body** | [**\Sematext\STCloud\Model\AlertNotificationRequest**](../Model/AlertNotificationRequest.md) | Time Interval |
 
 ### Return type
 
@@ -116,4 +116,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

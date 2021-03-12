@@ -2,16 +2,16 @@
 
 All URIs are relative to */*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**deleteUsingDELETE1**](AppsApi.md#deleteusingdelete1) | **DELETE** /users-web/api/v3/apps/{anyStateAppId} | delete
-[**getAppTypesUsingGET1**](AppsApi.md#getapptypesusingget1) | **GET** /users-web/api/v3/apps/types | Get all App types supported for the account identified with apiKey
-[**getUsingGET1**](AppsApi.md#getusingget1) | **GET** /users-web/api/v3/apps/{anyStateAppId} | Gets defails for one particular App
-[**inviteAppGuestsUsingPOST1**](AppsApi.md#inviteappguestsusingpost1) | **POST** /users-web/api/v3/apps/guests | Invite guests to an app
-[**listAppsUsersUsingGET1**](AppsApi.md#listappsusersusingget1) | **GET** /users-web/api/v3/apps/users | Get all users of apps accessible to this account
-[**listUsingGET**](AppsApi.md#listusingget) | **GET** /users-web/api/v3/apps | Get all apps accessible by account identified with apiKey
-[**updateDescriptionUsingPUT1**](AppsApi.md#updatedescriptionusingput1) | **PUT** /users-web/api/v3/apps/{anyStateAppId}/description | Update description of the app
-[**updateUsingPUT3**](AppsApi.md#updateusingput3) | **PUT** /users-web/api/v3/apps/{anyStateAppId} | Update app
+| Method                                                                  | HTTP request                                               | Description                                                        |
+| ----------------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------ |
+| [**deleteUsingDELETE1**](AppsApi.md#deleteusingdelete1)                 | **DELETE** /users-web/api/v3/apps/{anyStateAppId}          | delete                                                             |
+| [**getAppTypesUsingGET1**](AppsApi.md#getapptypesusingget1)             | **GET** /users-web/api/v3/apps/types                       | Get all App types supported for the account identified with apiKey |
+| [**getUsingGET1**](AppsApi.md#getusingget1)                             | **GET** /users-web/api/v3/apps/{anyStateAppId}             | Gets defails for one particular App                                |
+| [**inviteAppGuestsUsingPOST1**](AppsApi.md#inviteappguestsusingpost1)   | **POST** /users-web/api/v3/apps/guests                     | Invite guests to an app                                            |
+| [**listAppsUsersUsingGET1**](AppsApi.md#listappsusersusingget1)         | **GET** /users-web/api/v3/apps/users                       | Get all users of apps accessible to this account                   |
+| [**listUsingGET**](AppsApi.md#listusingget)                             | **GET** /users-web/api/v3/apps                             | Get all apps accessible by account identified with apiKey          |
+| [**updateDescriptionUsingPUT1**](AppsApi.md#updatedescriptionusingput1) | **PUT** /users-web/api/v3/apps/{anyStateAppId}/description | Update description of the app                                      |
+| [**updateUsingPUT3**](AppsApi.md#updateusingput3)                       | **PUT** /users-web/api/v3/apps/{anyStateAppId}             | Update app                                                         |
 
 # **deleteUsingDELETE1**
 > \Sematext\STCloud\Model\GenericMapBasedApiResponse deleteUsingDELETE1($any_state_app_id)
@@ -46,9 +46,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **any_state_app_id** | **int**| anyStateAppId |
+| Name                 | Type    | Description   | Notes |
+| -------------------- | ------- | ------------- | ----- |
+| **any_state_app_id** | **int** | anyStateAppId |
 
 ### Return type
 
@@ -146,9 +146,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **any_state_app_id** | **int**| anyStateAppId |
+| Name                 | Type    | Description   | Notes |
+| -------------------- | ------- | ------------- | ----- |
+| **any_state_app_id** | **int** | anyStateAppId |
 
 ### Return type
 
@@ -198,9 +198,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Sematext\STCloud\Model\Invitation**](../Model/Invitation.md)| For &#x60;app&#x60; and &#x60;apps&#x60; fields only &#x60;id&#x60; needs to be populated.Other fields can be left empty or with default values |
+| Name     | Type                                                             | Description                                                                                                                                     | Notes |
+| -------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
+| **body** | [**\Sematext\STCloud\Model\Invitation**](../Model/Invitation.md) | For &#x60;app&#x60; and &#x60;apps&#x60; fields only &#x60;id&#x60; needs to be populated.Other fields can be left empty or with default values |
 
 ### Return type
 
@@ -349,10 +349,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **any_state_app_id** | **int**| App Id |
- **body** | [**\Sematext\STCloud\Model\AppDescription**](../Model/AppDescription.md)| Update Details | [optional]
+| Name                 | Type                                                                     | Description    | Notes      |
+| -------------------- | ------------------------------------------------------------------------ | -------------- | ---------- |
+| **any_state_app_id** | **int**                                                                  | App Id         |
+| **body**             | [**\Sematext\STCloud\Model\AppDescription**](../Model/AppDescription.md) | Update Details | [optional] |
 
 ### Return type
 
@@ -405,10 +405,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Sematext\STCloud\Model\UpdateAppInfo**](../Model/UpdateAppInfo.md)| dto |
- **any_state_app_id** | **int**| App Id |
+| Name                 | Type                                                                   | Description | Notes |
+| -------------------- | ---------------------------------------------------------------------- | ----------- | ----- |
+| **body**             | [**\Sematext\STCloud\Model\UpdateAppInfo**](../Model/UpdateAppInfo.md) | dto         |
+| **any_state_app_id** | **int**                                                                | App Id      |
 
 ### Return type
 
@@ -424,4 +424,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

@@ -2,13 +2,13 @@
 
 All URIs are relative to */*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createAppToken**](TokensApiControllerApi.md#createapptoken) | **POST** /users-web/api/v3/apps/{appId}/tokens | Create new app token
-[**deleteAppToken1**](TokensApiControllerApi.md#deleteapptoken1) | **DELETE** /users-web/api/v3/apps/{appId}/tokens/{tokenId} | Delete app token
-[**getAppTokens1**](TokensApiControllerApi.md#getapptokens1) | **GET** /users-web/api/v3/apps/{appId}/tokens | Get app available tokens
-[**regenerateAppToken1**](TokensApiControllerApi.md#regenerateapptoken1) | **POST** /users-web/api/v3/apps/{appId}/tokens/{tokenId}/regenerate | Regenerate app token)
-[**updateAppToken**](TokensApiControllerApi.md#updateapptoken) | **PUT** /users-web/api/v3/apps/{appId}/tokens/{tokenId} | Update app token (enable/disable or name)
+| Method                                                                   | HTTP request                                                        | Description                               |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------- | ----------------------------------------- |
+| [**createAppToken**](TokensApiControllerApi.md#createapptoken)           | **POST** /users-web/api/v3/apps/{appId}/tokens                      | Create new app token                      |
+| [**deleteAppToken1**](TokensApiControllerApi.md#deleteapptoken1)         | **DELETE** /users-web/api/v3/apps/{appId}/tokens/{tokenId}          | Delete app token                          |
+| [**getAppTokens1**](TokensApiControllerApi.md#getapptokens1)             | **GET** /users-web/api/v3/apps/{appId}/tokens                       | Get app available tokens                  |
+| [**regenerateAppToken1**](TokensApiControllerApi.md#regenerateapptoken1) | **POST** /users-web/api/v3/apps/{appId}/tokens/{tokenId}/regenerate | Regenerate app token)                     |
+| [**updateAppToken**](TokensApiControllerApi.md#updateapptoken)           | **PUT** /users-web/api/v3/apps/{appId}/tokens/{tokenId}             | Update app token (enable/disable or name) |
 
 # **createAppToken**
 > \Sematext\STCloud\Model\TokenResponse createAppToken($body, $app_id)
@@ -44,10 +44,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Sematext\STCloud\Model\CreateTokenDto**](../Model/CreateTokenDto.md)| dto |
- **app_id** | **int**| appId |
+| Name       | Type                                                                     | Description | Notes |
+| ---------- | ------------------------------------------------------------------------ | ----------- | ----- |
+| **body**   | [**\Sematext\STCloud\Model\CreateTokenDto**](../Model/CreateTokenDto.md) | dto         |
+| **app_id** | **int**                                                                  | appId       |
 
 ### Return type
 
@@ -98,10 +98,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **int**| appId |
- **token_id** | **int**| tokenId |
+| Name         | Type    | Description | Notes |
+| ------------ | ------- | ----------- | ----- |
+| **app_id**   | **int** | appId       |
+| **token_id** | **int** | tokenId     |
 
 ### Return type
 
@@ -151,9 +151,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **int**| appId |
+| Name       | Type    | Description | Notes |
+| ---------- | ------- | ----------- | ----- |
+| **app_id** | **int** | appId       |
 
 ### Return type
 
@@ -204,10 +204,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **int**| appId |
- **token_id** | **int**| tokenId |
+| Name         | Type    | Description | Notes |
+| ------------ | ------- | ----------- | ----- |
+| **app_id**   | **int** | appId       |
+| **token_id** | **int** | tokenId     |
 
 ### Return type
 
@@ -259,11 +259,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Sematext\STCloud\Model\UpdateTokenDto**](../Model/UpdateTokenDto.md)| dto |
- **app_id** | **int**| appId |
- **token_id** | **int**| tokenId |
+| Name         | Type                                                                     | Description | Notes |
+| ------------ | ------------------------------------------------------------------------ | ----------- | ----- |
+| **body**     | [**\Sematext\STCloud\Model\UpdateTokenDto**](../Model/UpdateTokenDto.md) | dto         |
+| **app_id**   | **int**                                                                  | appId       |
+| **token_id** | **int**                                                                  | tokenId     |
 
 ### Return type
 
@@ -279,4 +279,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

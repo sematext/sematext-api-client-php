@@ -2,9 +2,9 @@
 
 All URIs are relative to */*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**updateUsingPUT1**](AwsSettingsControllerApi.md#updateusingput1) | **PUT** /users-web/api/v3/apps/{appId}/aws | Update App&#x27;s AWS CloudWatch settings
+| Method                                                             | HTTP request                               | Description                               |
+| ------------------------------------------------------------------ | ------------------------------------------ | ----------------------------------------- |
+| [**updateUsingPUT1**](AwsSettingsControllerApi.md#updateusingput1) | **PUT** /users-web/api/v3/apps/{appId}/aws | Update App&#x27;s AWS CloudWatch settings |
 
 # **updateUsingPUT1**
 > \Sematext\STCloud\Model\CloudWatchSettingsResponse updateUsingPUT1($body, $app_id)
@@ -42,10 +42,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Sematext\STCloud\Model\CloudWatchSettings**](../Model/CloudWatchSettings.md)| dto |
- **app_id** | **int**| appId |
+| Name       | Type                                                                             | Description | Notes |
+| ---------- | -------------------------------------------------------------------------------- | ----------- | ----- |
+| **body**   | [**\Sematext\STCloud\Model\CloudWatchSettings**](../Model/CloudWatchSettings.md) | dto         |
+| **app_id** | **int**                                                                          | appId       |
 
 ### Return type
 
@@ -61,4 +61,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

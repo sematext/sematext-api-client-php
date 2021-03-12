@@ -2,18 +2,18 @@
 
 All URIs are relative to */*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createForAppUsingPOST1**](SubscriptionsApi.md#createforappusingpost1) | **POST** /users-web/api/v3/apps/{appId}/subscription | Create App subscription
-[**createForDashUsingPOST**](SubscriptionsApi.md#createfordashusingpost) | **POST** /users-web/api/v3/dashboards/{dashId}/subscription | Create dashboard subscription
-[**deleteUsingDELETE2**](SubscriptionsApi.md#deleteusingdelete2) | **DELETE** /users-web/api/v3/subscriptions/{updateableSubscriptionId} | Delete subscription
-[**listUsingGET2**](SubscriptionsApi.md#listusingget2) | **GET** /users-web/api/v3/apps/{appId}/subscriptions | Get subscriptions for an App
-[**listUsingGET5**](SubscriptionsApi.md#listusingget5) | **GET** /users-web/api/v3/subscriptions | Get current account&#x27;s subscriptions
-[**sendAppReportUsingPOST1**](SubscriptionsApi.md#sendappreportusingpost1) | **POST** /users-web/api/v3/apps/{appId}/report/send | Email an App report
-[**sendDashReportUsingPOST**](SubscriptionsApi.md#senddashreportusingpost) | **POST** /users-web/api/v3/dashboards/{dashId}/report/send | Email a dashboard report
-[**toggleEnabledUsingPUT1**](SubscriptionsApi.md#toggleenabledusingput1) | **PUT** /users-web/api/v3/subscriptions/{updateableSubscriptionId} | Toggle subscription status
-[**updateForAppUsingPUT**](SubscriptionsApi.md#updateforappusingput) | **PUT** /users-web/api/v3/apps/{appId}/subscription | Update App subscription
-[**updateForDashUsingPUT1**](SubscriptionsApi.md#updatefordashusingput1) | **PUT** /users-web/api/v3/dashboards/{dashId}/subscription | Update dashboard subscription
+| Method                                                                     | HTTP request                                                          | Description                              |
+| -------------------------------------------------------------------------- | --------------------------------------------------------------------- | ---------------------------------------- |
+| [**createForAppUsingPOST1**](SubscriptionsApi.md#createforappusingpost1)   | **POST** /users-web/api/v3/apps/{appId}/subscription                  | Create App subscription                  |
+| [**createForDashUsingPOST**](SubscriptionsApi.md#createfordashusingpost)   | **POST** /users-web/api/v3/dashboards/{dashId}/subscription           | Create dashboard subscription            |
+| [**deleteUsingDELETE2**](SubscriptionsApi.md#deleteusingdelete2)           | **DELETE** /users-web/api/v3/subscriptions/{updateableSubscriptionId} | Delete subscription                      |
+| [**listUsingGET2**](SubscriptionsApi.md#listusingget2)                     | **GET** /users-web/api/v3/apps/{appId}/subscriptions                  | Get subscriptions for an App             |
+| [**listUsingGET5**](SubscriptionsApi.md#listusingget5)                     | **GET** /users-web/api/v3/subscriptions                               | Get current account&#x27;s subscriptions |
+| [**sendAppReportUsingPOST1**](SubscriptionsApi.md#sendappreportusingpost1) | **POST** /users-web/api/v3/apps/{appId}/report/send                   | Email an App report                      |
+| [**sendDashReportUsingPOST**](SubscriptionsApi.md#senddashreportusingpost) | **POST** /users-web/api/v3/dashboards/{dashId}/report/send            | Email a dashboard report                 |
+| [**toggleEnabledUsingPUT1**](SubscriptionsApi.md#toggleenabledusingput1)   | **PUT** /users-web/api/v3/subscriptions/{updateableSubscriptionId}    | Toggle subscription status               |
+| [**updateForAppUsingPUT**](SubscriptionsApi.md#updateforappusingput)       | **PUT** /users-web/api/v3/apps/{appId}/subscription                   | Update App subscription                  |
+| [**updateForDashUsingPUT1**](SubscriptionsApi.md#updatefordashusingput1)   | **PUT** /users-web/api/v3/dashboards/{dashId}/subscription            | Update dashboard subscription            |
 
 # **createForAppUsingPOST1**
 > \Sematext\STCloud\Model\SubscriptionResponse createForAppUsingPOST1($body, $app_id)
@@ -49,10 +49,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Sematext\STCloud\Model\SubscriptionDto**](../Model/SubscriptionDto.md)| subscription |
- **app_id** | **int**| appId |
+| Name       | Type                                                                       | Description  | Notes |
+| ---------- | -------------------------------------------------------------------------- | ------------ | ----- |
+| **body**   | [**\Sematext\STCloud\Model\SubscriptionDto**](../Model/SubscriptionDto.md) | subscription |
+| **app_id** | **int**                                                                    | appId        |
 
 ### Return type
 
@@ -103,10 +103,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Sematext\STCloud\Model\SubscriptionDashboardDto**](../Model/SubscriptionDashboardDto.md)| subscription |
- **dash_id** | **int**| dashId |
+| Name        | Type                                                                                         | Description  | Notes |
+| ----------- | -------------------------------------------------------------------------------------------- | ------------ | ----- |
+| **body**    | [**\Sematext\STCloud\Model\SubscriptionDashboardDto**](../Model/SubscriptionDashboardDto.md) | subscription |
+| **dash_id** | **int**                                                                                      | dashId       |
 
 ### Return type
 
@@ -156,9 +156,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **updateable_subscription_id** | **int**| updateableSubscriptionId |
+| Name                           | Type    | Description              | Notes |
+| ------------------------------ | ------- | ------------------------ | ----- |
+| **updateable_subscription_id** | **int** | updateableSubscriptionId |
 
 ### Return type
 
@@ -208,9 +208,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **int**| appId |
+| Name       | Type    | Description | Notes |
+| ---------- | ------- | ----------- | ----- |
+| **app_id** | **int** | appId       |
 
 ### Return type
 
@@ -309,10 +309,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Sematext\STCloud\Model\ReportInfo**](../Model/ReportInfo.md)| emailDto |
- **app_id** | **int**| appId |
+| Name       | Type                                                             | Description | Notes |
+| ---------- | ---------------------------------------------------------------- | ----------- | ----- |
+| **body**   | [**\Sematext\STCloud\Model\ReportInfo**](../Model/ReportInfo.md) | emailDto    |
+| **app_id** | **int**                                                          | appId       |
 
 ### Return type
 
@@ -363,10 +363,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Sematext\STCloud\Model\ReportInfo**](../Model/ReportInfo.md)| emailDto |
- **dash_id** | **int**| dashId |
+| Name        | Type                                                             | Description | Notes |
+| ----------- | ---------------------------------------------------------------- | ----------- | ----- |
+| **body**    | [**\Sematext\STCloud\Model\ReportInfo**](../Model/ReportInfo.md) | emailDto    |
+| **dash_id** | **int**                                                          | dashId      |
 
 ### Return type
 
@@ -417,10 +417,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Sematext\STCloud\Model\UpdateSubscriptionDto**](../Model/UpdateSubscriptionDto.md)| dto |
- **updateable_subscription_id** | **int**| updateableSubscriptionId |
+| Name                           | Type                                                                                   | Description              | Notes |
+| ------------------------------ | -------------------------------------------------------------------------------------- | ------------------------ | ----- |
+| **body**                       | [**\Sematext\STCloud\Model\UpdateSubscriptionDto**](../Model/UpdateSubscriptionDto.md) | dto                      |
+| **updateable_subscription_id** | **int**                                                                                | updateableSubscriptionId |
 
 ### Return type
 
@@ -471,10 +471,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Sematext\STCloud\Model\SubscriptionDto**](../Model/SubscriptionDto.md)| subscription |
- **app_id** | **int**| appId |
+| Name       | Type                                                                       | Description  | Notes |
+| ---------- | -------------------------------------------------------------------------- | ------------ | ----- |
+| **body**   | [**\Sematext\STCloud\Model\SubscriptionDto**](../Model/SubscriptionDto.md) | subscription |
+| **app_id** | **int**                                                                    | appId        |
 
 ### Return type
 
@@ -525,10 +525,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Sematext\STCloud\Model\SubscriptionDashboardDto**](../Model/SubscriptionDashboardDto.md)| subscription |
- **dash_id** | **int**| dashId |
+| Name        | Type                                                                                         | Description  | Notes |
+| ----------- | -------------------------------------------------------------------------------------------- | ------------ | ----- |
+| **body**    | [**\Sematext\STCloud\Model\SubscriptionDashboardDto**](../Model/SubscriptionDashboardDto.md) | subscription |
+| **dash_id** | **int**                                                                                      | dashId       |
 
 ### Return type
 
@@ -544,4 +544,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
