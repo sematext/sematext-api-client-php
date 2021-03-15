@@ -1,83 +1,33 @@
-# sematext\stcloud\AppsApi
+# Sematext\STCloud\AppsApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to */*
 
-| Method                                                                | HTTP request                                               | Description                                                        |
-| --------------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------ |
-| [**getAppTypesUsingGET**](AppsApi.md#getAppTypesUsingGET)             | **GET** /users-web/api/v3/apps/types                       | Get all App types supported for the account identified with apiKey |
-| [**getUsingGET**](AppsApi.md#getUsingGET)                             | **GET** /users-web/api/v3/apps/{anyStateAppId}             | Gets defails for one particular App                                |
-| [**inviteAppGuestsUsingPOST**](AppsApi.md#inviteAppGuestsUsingPOST)   | **POST** /users-web/api/v3/apps/guests                     | Invite guests to an app                                            |
-| [**listAppsUsersUsingGET**](AppsApi.md#listAppsUsersUsingGET)         | **GET** /users-web/api/v3/apps/users                       | Get all users of apps accessible to this account                   |
-| [**listUsingGET**](AppsApi.md#listUsingGET)                           | **GET** /users-web/api/v3/apps                             | Get all apps accessible by account identified with apiKey          |
-| [**updateDescriptionUsingPUT**](AppsApi.md#updateDescriptionUsingPUT) | **PUT** /users-web/api/v3/apps/{anyStateAppId}/description | Update description of the app                                      |
-| [**updateUsingPUT1**](AppsApi.md#updateUsingPUT1)                     | **PUT** /users-web/api/v3/apps/{anyStateAppId}             | Update app                                                         |
+| Method                                                                  | HTTP request                                               | Description                                                        |
+| ----------------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------ |
+| [**deleteUsingDELETE1**](AppsApi.md#deleteusingdelete1)                 | **DELETE** /users-web/api/v3/apps/{anyStateAppId}          | delete                                                             |
+| [**getAppTypesUsingGET1**](AppsApi.md#getapptypesusingget1)             | **GET** /users-web/api/v3/apps/types                       | Get all App types supported for the account identified with apiKey |
+| [**getUsingGET1**](AppsApi.md#getusingget1)                             | **GET** /users-web/api/v3/apps/{anyStateAppId}             | Gets defails for one particular App                                |
+| [**inviteAppGuestsUsingPOST1**](AppsApi.md#inviteappguestsusingpost1)   | **POST** /users-web/api/v3/apps/guests                     | Invite guests to an app                                            |
+| [**listAppsUsersUsingGET1**](AppsApi.md#listappsusersusingget1)         | **GET** /users-web/api/v3/apps/users                       | Get all users of apps accessible to this account                   |
+| [**listUsingGET**](AppsApi.md#listusingget)                             | **GET** /users-web/api/v3/apps                             | Get all apps accessible by account identified with apiKey          |
+| [**updateDescriptionUsingPUT1**](AppsApi.md#updatedescriptionusingput1) | **PUT** /users-web/api/v3/apps/{anyStateAppId}/description | Update description of the app                                      |
+| [**updateUsingPUT3**](AppsApi.md#updateusingput3)                       | **PUT** /users-web/api/v3/apps/{anyStateAppId}             | Update app                                                         |
 
+# **deleteUsingDELETE1**
+> \Sematext\STCloud\Model\GenericMapBasedApiResponse deleteUsingDELETE1($any_state_app_id)
 
-# **getAppTypesUsingGET**
-> \sematext\stcloud\Model\GenericApiResponse getAppTypesUsingGET()
-
-Get all App types supported for the account identified with apiKey
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: api_key
-$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-$apiInstance = new sematext\stcloud\Api\AppsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-
-try {
-    $result = $apiInstance->getAppTypesUsingGET();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling AppsApi->getAppTypesUsingGET: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
-
-### Authorization
-
-[api_key](../../README.md#api_key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **getUsingGET**
-> \sematext\stcloud\Model\GenericApiResponse getUsingGET($any_state_app_id)
-
-Gets defails for one particular App
+delete
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure API key authorization: api_key
-$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new sematext\stcloud\Api\AppsApi(
+$apiInstance = new Sematext\STCloud\API\AppsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -86,10 +36,10 @@ $apiInstance = new sematext\stcloud\Api\AppsApi(
 $any_state_app_id = 789; // int | anyStateAppId
 
 try {
-    $result = $apiInstance->getUsingGET($any_state_app_id);
+    $result = $apiInstance->deleteUsingDELETE1($any_state_app_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AppsApi->getUsingGET: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AppsApi->deleteUsingDELETE1: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -102,7 +52,7 @@ try {
 
 ### Return type
 
-[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\GenericMapBasedApiResponse**](../Model/GenericMapBasedApiResponse.md)
 
 ### Authorization
 
@@ -110,80 +60,26 @@ try {
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **inviteAppGuestsUsingPOST**
-> \sematext\stcloud\Model\GenericApiResponse inviteAppGuestsUsingPOST($invitation)
+# **getAppTypesUsingGET1**
+> \Sematext\STCloud\Model\AppTypesResponse getAppTypesUsingGET1()
 
-Invite guests to an app
+Get all App types supported for the account identified with apiKey
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure API key authorization: api_key
-$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new sematext\stcloud\Api\AppsApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$invitation = new \sematext\stcloud\Model\Invitation(); // \sematext\stcloud\Model\Invitation | For `app` and `apps` fields only `id` needs to be populated.Other fields can be left empty or with default values
-
-try {
-    $result = $apiInstance->inviteAppGuestsUsingPOST($invitation);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling AppsApi->inviteAppGuestsUsingPOST: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-| Name           | Type                                                             | Description                                                                                                                                     | Notes |
-| -------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
-| **invitation** | [**\sematext\stcloud\Model\Invitation**](../Model/Invitation.md) | For &#x60;app&#x60; and &#x60;apps&#x60; fields only &#x60;id&#x60; needs to be populated.Other fields can be left empty or with default values |
-
-### Return type
-
-[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
-
-### Authorization
-
-[api_key](../../README.md#api_key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **listAppsUsersUsingGET**
-> \sematext\stcloud\Model\GenericApiResponse listAppsUsersUsingGET()
-
-Get all users of apps accessible to this account
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: api_key
-$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-$apiInstance = new sematext\stcloud\Api\AppsApi(
+$apiInstance = new Sematext\STCloud\API\AppsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -191,10 +87,10 @@ $apiInstance = new sematext\stcloud\Api\AppsApi(
 );
 
 try {
-    $result = $apiInstance->listAppsUsersUsingGET();
+    $result = $apiInstance->getAppTypesUsingGET1();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AppsApi->listAppsUsersUsingGET: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AppsApi->getAppTypesUsingGET1: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -204,7 +100,111 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\AppTypesResponse**](../Model/AppTypesResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getUsingGET1**
+> \Sematext\STCloud\Model\AppResponse getUsingGET1($any_state_app_id)
+
+Gets defails for one particular App
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: api_key
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$apiInstance = new Sematext\STCloud\API\AppsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$any_state_app_id = 789; // int | anyStateAppId
+
+try {
+    $result = $apiInstance->getUsingGET1($any_state_app_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AppsApi->getUsingGET1: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+| Name                 | Type    | Description   | Notes |
+| -------------------- | ------- | ------------- | ----- |
+| **any_state_app_id** | **int** | anyStateAppId |
+
+### Return type
+
+[**\Sematext\STCloud\Model\AppResponse**](../Model/AppResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **inviteAppGuestsUsingPOST1**
+> \Sematext\STCloud\Model\GenericMapBasedApiResponse inviteAppGuestsUsingPOST1($body)
+
+Invite guests to an app
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: api_key
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$apiInstance = new Sematext\STCloud\API\AppsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \Sematext\STCloud\Model\Invitation(); // \Sematext\STCloud\Model\Invitation | For `app` and `apps` fields only `id` needs to be populated.Other fields can be left empty or with default values
+
+try {
+    $result = $apiInstance->inviteAppGuestsUsingPOST1($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AppsApi->inviteAppGuestsUsingPOST1: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+| Name     | Type                                                             | Description                                                                                                                                     | Notes |
+| -------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
+| **body** | [**\Sematext\STCloud\Model\Invitation**](../Model/Invitation.md) | For &#x60;app&#x60; and &#x60;apps&#x60; fields only &#x60;id&#x60; needs to be populated.Other fields can be left empty or with default values |
+
+### Return type
+
+[**\Sematext\STCloud\Model\GenericMapBasedApiResponse**](../Model/GenericMapBasedApiResponse.md)
 
 ### Authorization
 
@@ -217,8 +217,56 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **listAppsUsersUsingGET1**
+> \Sematext\STCloud\Model\AppsResponse listAppsUsersUsingGET1()
+
+Get all users of apps accessible to this account
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: api_key
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+$apiInstance = new Sematext\STCloud\API\AppsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+
+try {
+    $result = $apiInstance->listAppsUsersUsingGET1();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AppsApi->listAppsUsersUsingGET1: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\Sematext\STCloud\Model\AppsResponse**](../Model/AppsResponse.md)
+
+### Authorization
+
+[api_key](../../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **listUsingGET**
-> \sematext\stcloud\Model\GenericApiResponse listUsingGET()
+> \Sematext\STCloud\Model\AppsResponse listUsingGET()
 
 Get all apps accessible by account identified with apiKey
 
@@ -226,13 +274,12 @@ Get all apps accessible by account identified with apiKey
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure API key authorization: api_key
-$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new sematext\stcloud\Api\AppsApi(
+$apiInstance = new Sematext\STCloud\API\AppsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -253,7 +300,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\AppsResponse**](../Model/AppsResponse.md)
 
 ### Authorization
 
@@ -261,13 +308,13 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updateDescriptionUsingPUT**
-> \sematext\stcloud\Model\GenericApiResponse updateDescriptionUsingPUT($any_state_app_id, $update_details)
+# **updateDescriptionUsingPUT1**
+> \Sematext\STCloud\Model\AppResponse updateDescriptionUsingPUT1($any_state_app_id, $body)
 
 Update description of the app
 
@@ -277,26 +324,25 @@ App can be in any state
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure API key authorization: api_key
-$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new sematext\stcloud\Api\AppsApi(
+$apiInstance = new Sematext\STCloud\API\AppsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $any_state_app_id = 789; // int | App Id
-$update_details = new \sematext\stcloud\Model\AppDescription(); // \sematext\stcloud\Model\AppDescription | Update Details
+$body = new \Sematext\STCloud\Model\AppDescription(); // \Sematext\STCloud\Model\AppDescription | Update Details
 
 try {
-    $result = $apiInstance->updateDescriptionUsingPUT($any_state_app_id, $update_details);
+    $result = $apiInstance->updateDescriptionUsingPUT1($any_state_app_id, $body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AppsApi->updateDescriptionUsingPUT: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AppsApi->updateDescriptionUsingPUT1: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -306,11 +352,11 @@ try {
 | Name                 | Type                                                                     | Description    | Notes      |
 | -------------------- | ------------------------------------------------------------------------ | -------------- | ---------- |
 | **any_state_app_id** | **int**                                                                  | App Id         |
-| **update_details**   | [**\sematext\stcloud\Model\AppDescription**](../Model/AppDescription.md) | Update Details | [optional] |
+| **body**             | [**\Sematext\STCloud\Model\AppDescription**](../Model/AppDescription.md) | Update Details | [optional] |
 
 ### Return type
 
-[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\AppResponse**](../Model/AppResponse.md)
 
 ### Authorization
 
@@ -323,8 +369,8 @@ try {
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updateUsingPUT1**
-> \sematext\stcloud\Model\GenericApiResponse updateUsingPUT1($dto, $any_state_app_id)
+# **updateUsingPUT3**
+> \Sematext\STCloud\Model\AppResponse updateUsingPUT3($body, $any_state_app_id)
 
 Update app
 
@@ -334,26 +380,25 @@ App can be in any state
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure API key authorization: api_key
-$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new sematext\stcloud\Api\AppsApi(
+$apiInstance = new Sematext\STCloud\API\AppsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$dto = new \sematext\stcloud\Model\UpdateAppInfo(); // \sematext\stcloud\Model\UpdateAppInfo | dto
+$body = new \Sematext\STCloud\Model\UpdateAppInfo(); // \Sematext\STCloud\Model\UpdateAppInfo | dto
 $any_state_app_id = 789; // int | App Id
 
 try {
-    $result = $apiInstance->updateUsingPUT1($dto, $any_state_app_id);
+    $result = $apiInstance->updateUsingPUT3($body, $any_state_app_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AppsApi->updateUsingPUT1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AppsApi->updateUsingPUT3: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -362,12 +407,12 @@ try {
 
 | Name                 | Type                                                                   | Description | Notes |
 | -------------------- | ---------------------------------------------------------------------- | ----------- | ----- |
-| **dto**              | [**\sematext\stcloud\Model\UpdateAppInfo**](../Model/UpdateAppInfo.md) | dto         |
+| **body**             | [**\Sematext\STCloud\Model\UpdateAppInfo**](../Model/UpdateAppInfo.md) | dto         |
 | **any_state_app_id** | **int**                                                                | App Id      |
 
 ### Return type
 
-[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\AppResponse**](../Model/AppResponse.md)
 
 ### Authorization
 

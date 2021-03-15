@@ -1,18 +1,17 @@
 # Sematext\STCloud\TokensApiControllerApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to */*
 
 | Method                                                                   | HTTP request                                                        | Description                               |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------------- | ----------------------------------------- |
-| [**createAppToken1**](TokensApiControllerApi.md#createAppToken1)         | **POST** /users-web/api/v3/apps/{appId}/tokens                      | Create new app token                      |
-| [**deleteAppToken1**](TokensApiControllerApi.md#deleteAppToken1)         | **DELETE** /users-web/api/v3/apps/{appId}/tokens/{tokenId}          | Delete app token                          |
-| [**getAppTokens**](TokensApiControllerApi.md#getAppTokens)               | **GET** /users-web/api/v3/apps/{appId}/tokens                       | Get app available tokens                  |
-| [**regenerateAppToken1**](TokensApiControllerApi.md#regenerateAppToken1) | **POST** /users-web/api/v3/apps/{appId}/tokens/{tokenId}/regenerate | Regenerate app token)                     |
-| [**updateAppToken**](TokensApiControllerApi.md#updateAppToken)           | **PUT** /users-web/api/v3/apps/{appId}/tokens/{tokenId}             | Update app token (enable/disable or name) |
+| [**createAppToken**](TokensApiControllerApi.md#createapptoken)           | **POST** /users-web/api/v3/apps/{appId}/tokens                      | Create new app token                      |
+| [**deleteAppToken1**](TokensApiControllerApi.md#deleteapptoken1)         | **DELETE** /users-web/api/v3/apps/{appId}/tokens/{tokenId}          | Delete app token                          |
+| [**getAppTokens1**](TokensApiControllerApi.md#getapptokens1)             | **GET** /users-web/api/v3/apps/{appId}/tokens                       | Get app available tokens                  |
+| [**regenerateAppToken1**](TokensApiControllerApi.md#regenerateapptoken1) | **POST** /users-web/api/v3/apps/{appId}/tokens/{tokenId}/regenerate | Regenerate app token)                     |
+| [**updateAppToken**](TokensApiControllerApi.md#updateapptoken)           | **PUT** /users-web/api/v3/apps/{appId}/tokens/{tokenId}             | Update app token (enable/disable or name) |
 
-
-# **createAppToken1**
-> \Sematext\STCloud\Model\GenericApiResponse createAppToken1($app_id, $dto)
+# **createAppToken**
+> \Sematext\STCloud\Model\TokenResponse createAppToken($body, $app_id)
 
 Create new app token
 
@@ -20,26 +19,25 @@ Create new app token
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure API key authorization: api_key
 $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\TokensApiControllerApi(
+$apiInstance = new Sematext\STCloud\API\TokensApiControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \Sematext\STCloud\Model\CreateTokenDto(); // \Sematext\STCloud\Model\CreateTokenDto | dto
 $app_id = 789; // int | appId
-$dto = new \Sematext\STCloud\Model\CreateTokenDto(); // \Sematext\STCloud\Model\CreateTokenDto | dto
 
 try {
-    $result = $apiInstance->createAppToken1($app_id, $dto);
+    $result = $apiInstance->createAppToken($body, $app_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TokensApiControllerApi->createAppToken1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TokensApiControllerApi->createAppToken: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -48,12 +46,12 @@ try {
 
 | Name       | Type                                                                     | Description | Notes |
 | ---------- | ------------------------------------------------------------------------ | ----------- | ----- |
+| **body**   | [**\Sematext\STCloud\Model\CreateTokenDto**](../Model/CreateTokenDto.md) | dto         |
 | **app_id** | **int**                                                                  | appId       |
-| **dto**    | [**\Sematext\STCloud\Model\CreateTokenDto**](../Model/CreateTokenDto.md) | dto         |
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\TokenResponse**](../Model/TokenResponse.md)
 
 ### Authorization
 
@@ -67,7 +65,7 @@ try {
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteAppToken1**
-> \Sematext\STCloud\Model\GenericApiResponse deleteAppToken1($app_id, $token_id)
+> \Sematext\STCloud\Model\GenericMapBasedApiResponse deleteAppToken1($app_id, $token_id)
 
 Delete app token
 
@@ -75,13 +73,12 @@ Delete app token
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure API key authorization: api_key
 $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\TokensApiControllerApi(
+$apiInstance = new Sematext\STCloud\API\TokensApiControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -108,7 +105,7 @@ try {
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\GenericMapBasedApiResponse**](../Model/GenericMapBasedApiResponse.md)
 
 ### Authorization
 
@@ -116,13 +113,13 @@ try {
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getAppTokens**
-> \Sematext\STCloud\Model\GenericApiResponse getAppTokens($app_id)
+# **getAppTokens1**
+> \Sematext\STCloud\Model\TokensResponse getAppTokens1($app_id)
 
 Get app available tokens
 
@@ -130,13 +127,12 @@ Get app available tokens
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure API key authorization: api_key
 $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\TokensApiControllerApi(
+$apiInstance = new Sematext\STCloud\API\TokensApiControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -145,10 +141,10 @@ $apiInstance = new Sematext\STCloud\Api\TokensApiControllerApi(
 $app_id = 789; // int | appId
 
 try {
-    $result = $apiInstance->getAppTokens($app_id);
+    $result = $apiInstance->getAppTokens1($app_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TokensApiControllerApi->getAppTokens: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TokensApiControllerApi->getAppTokens1: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -161,7 +157,7 @@ try {
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\TokensResponse**](../Model/TokensResponse.md)
 
 ### Authorization
 
@@ -169,13 +165,13 @@ try {
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **regenerateAppToken1**
-> \Sematext\STCloud\Model\GenericApiResponse regenerateAppToken1($app_id, $token_id)
+> \Sematext\STCloud\Model\TokenResponse regenerateAppToken1($app_id, $token_id)
 
 Regenerate app token)
 
@@ -183,13 +179,12 @@ Regenerate app token)
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure API key authorization: api_key
 $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\TokensApiControllerApi(
+$apiInstance = new Sematext\STCloud\API\TokensApiControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -216,7 +211,7 @@ try {
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\TokenResponse**](../Model/TokenResponse.md)
 
 ### Authorization
 
@@ -224,13 +219,13 @@ try {
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAppToken**
-> \Sematext\STCloud\Model\GenericApiResponse updateAppToken($app_id, $token_id, $dto)
+> \Sematext\STCloud\Model\TokenResponse updateAppToken($body, $app_id, $token_id)
 
 Update app token (enable/disable or name)
 
@@ -238,24 +233,23 @@ Update app token (enable/disable or name)
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure API key authorization: api_key
 $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Sematext\STCloud\Api\TokensApiControllerApi(
+$apiInstance = new Sematext\STCloud\API\TokensApiControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \Sematext\STCloud\Model\UpdateTokenDto(); // \Sematext\STCloud\Model\UpdateTokenDto | dto
 $app_id = 789; // int | appId
 $token_id = 789; // int | tokenId
-$dto = new \Sematext\STCloud\Model\UpdateTokenDto(); // \Sematext\STCloud\Model\UpdateTokenDto | dto
 
 try {
-    $result = $apiInstance->updateAppToken($app_id, $token_id, $dto);
+    $result = $apiInstance->updateAppToken($body, $app_id, $token_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TokensApiControllerApi->updateAppToken: ', $e->getMessage(), PHP_EOL;
@@ -267,13 +261,13 @@ try {
 
 | Name         | Type                                                                     | Description | Notes |
 | ------------ | ------------------------------------------------------------------------ | ----------- | ----- |
+| **body**     | [**\Sematext\STCloud\Model\UpdateTokenDto**](../Model/UpdateTokenDto.md) | dto         |
 | **app_id**   | **int**                                                                  | appId       |
 | **token_id** | **int**                                                                  | tokenId     |
-| **dto**      | [**\Sematext\STCloud\Model\UpdateTokenDto**](../Model/UpdateTokenDto.md) | dto         |
 
 ### Return type
 
-[**\Sematext\STCloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\TokenResponse**](../Model/TokenResponse.md)
 
 ### Authorization
 

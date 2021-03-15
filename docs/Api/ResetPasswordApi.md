@@ -1,14 +1,13 @@
-# sematext\stcloud\ResetPasswordApi
+# Sematext\STCloud\ResetPasswordApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to */*
 
 | Method                                                                   | HTTP request                                      | Description    |
 | ------------------------------------------------------------------------ | ------------------------------------------------- | -------------- |
-| [**resetPasswordUsingPOST**](ResetPasswordApi.md#resetPasswordUsingPOST) | **POST** /users-web/api/v3/account/password/reset | Reset Password |
-
+| [**resetPasswordUsingPOST**](ResetPasswordApi.md#resetpasswordusingpost) | **POST** /users-web/api/v3/account/password/reset | Reset Password |
 
 # **resetPasswordUsingPOST**
-> \sematext\stcloud\Model\GenericApiResponse resetPasswordUsingPOST($dto)
+> \Sematext\STCloud\Model\GenericMapBasedApiResponse resetPasswordUsingPOST($body)
 
 Reset Password
 
@@ -16,22 +15,21 @@ Reset Password
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure API key authorization: api_key
-$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new sematext\stcloud\Api\ResetPasswordApi(
+$apiInstance = new Sematext\STCloud\API\ResetPasswordApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$dto = new \sematext\stcloud\Model\UserInfo(); // \sematext\stcloud\Model\UserInfo | dto
+$body = new \Sematext\STCloud\Model\UserInfo(); // \Sematext\STCloud\Model\UserInfo | dto
 
 try {
-    $result = $apiInstance->resetPasswordUsingPOST($dto);
+    $result = $apiInstance->resetPasswordUsingPOST($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ResetPasswordApi->resetPasswordUsingPOST: ', $e->getMessage(), PHP_EOL;
@@ -41,13 +39,13 @@ try {
 
 ### Parameters
 
-| Name    | Type                                                         | Description | Notes |
-| ------- | ------------------------------------------------------------ | ----------- | ----- |
-| **dto** | [**\sematext\stcloud\Model\UserInfo**](../Model/UserInfo.md) | dto         |
+| Name     | Type                                                         | Description | Notes |
+| -------- | ------------------------------------------------------------ | ----------- | ----- |
+| **body** | [**\Sematext\STCloud\Model\UserInfo**](../Model/UserInfo.md) | dto         |
 
 ### Return type
 
-[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\GenericMapBasedApiResponse**](../Model/GenericMapBasedApiResponse.md)
 
 ### Authorization
 

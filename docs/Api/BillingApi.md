@@ -1,16 +1,15 @@
-# sematext\stcloud\BillingApi
+# Sematext\STCloud\BillingApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to */*
 
 | Method                                                                     | HTTP request                                                       | Description            |
 | -------------------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------- |
-| [**getDetailedInvoiceUsingGET**](BillingApi.md#getDetailedInvoiceUsingGET) | **GET** /users-web/api/v3/billing/invoice/{service}/{year}/{month} | Get invoice details    |
-| [**listAvailablePlansUsingGET**](BillingApi.md#listAvailablePlansUsingGET) | **GET** /users-web/api/v3/billing/availablePlans                   | Get available plans    |
-| [**updatePlanUsingPUT**](BillingApi.md#updatePlanUsingPUT)                 | **PUT** /users-web/api/v3/billing/info/{appId}                     | Update plan for an app |
-
+| [**getDetailedInvoiceUsingGET**](BillingApi.md#getdetailedinvoiceusingget) | **GET** /users-web/api/v3/billing/invoice/{service}/{year}/{month} | Get invoice details    |
+| [**listAvailablePlansUsingGET**](BillingApi.md#listavailableplansusingget) | **GET** /users-web/api/v3/billing/availablePlans                   | Get available plans    |
+| [**updatePlanUsingPUT**](BillingApi.md#updateplanusingput)                 | **PUT** /users-web/api/v3/billing/info/{appId}                     | Update plan for an app |
 
 # **getDetailedInvoiceUsingGET**
-> \sematext\stcloud\Model\GenericApiResponse getDetailedInvoiceUsingGET($service, $year, $month)
+> \Sematext\STCloud\Model\InvoiceResponse getDetailedInvoiceUsingGET($service, $year, $month)
 
 Get invoice details
 
@@ -18,13 +17,12 @@ Get invoice details
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure API key authorization: api_key
-$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new sematext\stcloud\Api\BillingApi(
+$apiInstance = new Sematext\STCloud\API\BillingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -53,7 +51,7 @@ try {
 
 ### Return type
 
-[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\InvoiceResponse**](../Model/InvoiceResponse.md)
 
 ### Authorization
 
@@ -61,13 +59,13 @@ try {
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listAvailablePlansUsingGET**
-> \sematext\stcloud\Model\GenericApiResponse listAvailablePlansUsingGET($integration_id, $app_type)
+> \Sematext\STCloud\Model\PlansResponse listAvailablePlansUsingGET($integration_id, $app_type)
 
 Get available plans
 
@@ -75,13 +73,12 @@ Get available plans
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure API key authorization: api_key
-$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new sematext\stcloud\Api\BillingApi(
+$apiInstance = new Sematext\STCloud\API\BillingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -108,7 +105,7 @@ try {
 
 ### Return type
 
-[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\PlansResponse**](../Model/PlansResponse.md)
 
 ### Authorization
 
@@ -116,13 +113,13 @@ try {
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updatePlanUsingPUT**
-> \sematext\stcloud\Model\GenericApiResponse updatePlanUsingPUT($app_id, $dto)
+> \Sematext\STCloud\Model\UpdatePlanResponse updatePlanUsingPUT($body, $app_id)
 
 Update plan for an app
 
@@ -130,23 +127,22 @@ Update plan for an app
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure API key authorization: api_key
-$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new sematext\stcloud\Api\BillingApi(
+$apiInstance = new Sematext\STCloud\API\BillingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \Sematext\STCloud\Model\BillingInfo(); // \Sematext\STCloud\Model\BillingInfo | dto
 $app_id = 789; // int | appId
-$dto = new \sematext\stcloud\Model\BillingInfo(); // \sematext\stcloud\Model\BillingInfo | dto
 
 try {
-    $result = $apiInstance->updatePlanUsingPUT($app_id, $dto);
+    $result = $apiInstance->updatePlanUsingPUT($body, $app_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BillingApi->updatePlanUsingPUT: ', $e->getMessage(), PHP_EOL;
@@ -158,12 +154,12 @@ try {
 
 | Name       | Type                                                               | Description | Notes |
 | ---------- | ------------------------------------------------------------------ | ----------- | ----- |
+| **body**   | [**\Sematext\STCloud\Model\BillingInfo**](../Model/BillingInfo.md) | dto         |
 | **app_id** | **int**                                                            | appId       |
-| **dto**    | [**\sematext\stcloud\Model\BillingInfo**](../Model/BillingInfo.md) | dto         |
 
 ### Return type
 
-[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\UpdatePlanResponse**](../Model/UpdatePlanResponse.md)
 
 ### Authorization
 

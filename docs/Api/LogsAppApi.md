@@ -1,14 +1,13 @@
-# sematext\stcloud\LogsAppApi
+# Sematext\STCloud\LogsAppApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to */*
 
 | Method                                                                 | HTTP request                          | Description     |
 | ---------------------------------------------------------------------- | ------------------------------------- | --------------- |
-| [**createLogseneApplication**](LogsAppApi.md#createLogseneApplication) | **POST** /logsene-reports/api/v3/apps | Create Logs App |
-
+| [**createLogseneApplication**](LogsAppApi.md#createlogseneapplication) | **POST** /logsene-reports/api/v3/apps | Create Logs App |
 
 # **createLogseneApplication**
-> \sematext\stcloud\Model\GenericApiResponse createLogseneApplication($application_details)
+> \Sematext\STCloud\Model\AppsResponse createLogseneApplication($body)
 
 Create Logs App
 
@@ -16,22 +15,21 @@ Create Logs App
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure API key authorization: api_key
-$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new sematext\stcloud\Api\LogsAppApi(
+$apiInstance = new Sematext\STCloud\API\LogsAppApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$application_details = new \sematext\stcloud\Model\CreateAppInfo(); // \sematext\stcloud\Model\CreateAppInfo | Details of the application to be created
+$body = new \Sematext\STCloud\Model\CreateAppInfo(); // \Sematext\STCloud\Model\CreateAppInfo | Details of the application to be created
 
 try {
-    $result = $apiInstance->createLogseneApplication($application_details);
+    $result = $apiInstance->createLogseneApplication($body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LogsAppApi->createLogseneApplication: ', $e->getMessage(), PHP_EOL;
@@ -41,13 +39,13 @@ try {
 
 ### Parameters
 
-| Name                    | Type                                                                   | Description                              | Notes |
-| ----------------------- | ---------------------------------------------------------------------- | ---------------------------------------- | ----- |
-| **application_details** | [**\sematext\stcloud\Model\CreateAppInfo**](../Model/CreateAppInfo.md) | Details of the application to be created |
+| Name     | Type                                                                   | Description                              | Notes |
+| -------- | ---------------------------------------------------------------------- | ---------------------------------------- | ----- |
+| **body** | [**\Sematext\STCloud\Model\CreateAppInfo**](../Model/CreateAppInfo.md) | Details of the application to be created |
 
 ### Return type
 
-[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\AppsResponse**](../Model/AppsResponse.md)
 
 ### Authorization
 

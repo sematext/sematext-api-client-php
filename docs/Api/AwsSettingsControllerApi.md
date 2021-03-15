@@ -1,14 +1,13 @@
-# sematext\stcloud\AwsSettingsControllerApi
+# Sematext\STCloud\AwsSettingsControllerApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to */*
 
-| Method                                                           | HTTP request                               | Description                              |
-| ---------------------------------------------------------------- | ------------------------------------------ | ---------------------------------------- |
-| [**updateUsingPUT**](AwsSettingsControllerApi.md#updateUsingPUT) | **PUT** /users-web/api/v3/apps/{appId}/aws | Update App&#39;s AWS CloudWatch settings |
+| Method                                                             | HTTP request                               | Description                               |
+| ------------------------------------------------------------------ | ------------------------------------------ | ----------------------------------------- |
+| [**updateUsingPUT1**](AwsSettingsControllerApi.md#updateusingput1) | **PUT** /users-web/api/v3/apps/{appId}/aws | Update App&#x27;s AWS CloudWatch settings |
 
-
-# **updateUsingPUT**
-> \sematext\stcloud\Model\GenericApiResponse updateUsingPUT($app_id, $dto)
+# **updateUsingPUT1**
+> \Sematext\STCloud\Model\CloudWatchSettingsResponse updateUsingPUT1($body, $app_id)
 
 Update App's AWS CloudWatch settings
 
@@ -18,26 +17,25 @@ Applicable only for AWS Apps
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-
 // Configure API key authorization: api_key
-$config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = sematext\stcloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Sematext\STCloud\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new sematext\stcloud\Api\AwsSettingsControllerApi(
+$apiInstance = new Sematext\STCloud\API\AwsSettingsControllerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
+$body = new \Sematext\STCloud\Model\CloudWatchSettings(); // \Sematext\STCloud\Model\CloudWatchSettings | dto
 $app_id = 789; // int | appId
-$dto = new \sematext\stcloud\Model\CloudWatchSettings(); // \sematext\stcloud\Model\CloudWatchSettings | dto
 
 try {
-    $result = $apiInstance->updateUsingPUT($app_id, $dto);
+    $result = $apiInstance->updateUsingPUT1($body, $app_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AwsSettingsControllerApi->updateUsingPUT: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AwsSettingsControllerApi->updateUsingPUT1: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -46,12 +44,12 @@ try {
 
 | Name       | Type                                                                             | Description | Notes |
 | ---------- | -------------------------------------------------------------------------------- | ----------- | ----- |
+| **body**   | [**\Sematext\STCloud\Model\CloudWatchSettings**](../Model/CloudWatchSettings.md) | dto         |
 | **app_id** | **int**                                                                          | appId       |
-| **dto**    | [**\sematext\stcloud\Model\CloudWatchSettings**](../Model/CloudWatchSettings.md) | dto         |
 
 ### Return type
 
-[**\sematext\stcloud\Model\GenericApiResponse**](../Model/GenericApiResponse.md)
+[**\Sematext\STCloud\Model\CloudWatchSettingsResponse**](../Model/CloudWatchSettingsResponse.md)
 
 ### Authorization
 
