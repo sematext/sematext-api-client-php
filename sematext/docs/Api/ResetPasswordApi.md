@@ -2,16 +2,18 @@
 
 All URIs are relative to */*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**resetPasswordUsingPOST1**](ResetPasswordApi.md#resetpasswordusingpost1) | **POST** /users-web/api/v3/account/password/reset | Reset Password
+| Method                                                                     | HTTP request                                      | Description    |
+| -------------------------------------------------------------------------- | ------------------------------------------------- | -------------- |
+| [**resetPasswordUsingPOST1**](ResetPasswordApi.md#resetpasswordusingpost1) | **POST** /users-web/api/v3/account/password/reset | Reset Password |
 
 # **resetPasswordUsingPOST1**
+
 > \sematext\stcloud\Model\GenericMapBasedApiResponse resetPasswordUsingPOST1($body)
 
 Reset Password
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -39,9 +41,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\sematext\stcloud\Model\UserInfo**](../Model/UserInfo.md)| dto |
+| Name     | Type                                                         | Description | Notes |
+| -------- | ------------------------------------------------------------ | ----------- | ----- |
+| **body** | [**\sematext\stcloud\Model\UserInfo**](../Model/UserInfo.md) | dto         |
 
 ### Return type
 
@@ -53,8 +55,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

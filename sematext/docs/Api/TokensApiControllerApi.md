@@ -2,20 +2,22 @@
 
 All URIs are relative to */*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createAppToken1**](TokensApiControllerApi.md#createapptoken1) | **POST** /users-web/api/v3/apps/{appId}/tokens | Create new app token
-[**deleteAppToken**](TokensApiControllerApi.md#deleteapptoken) | **DELETE** /users-web/api/v3/apps/{appId}/tokens/{tokenId} | Delete app token
-[**getAppTokens**](TokensApiControllerApi.md#getapptokens) | **GET** /users-web/api/v3/apps/{appId}/tokens | Get app available tokens
-[**regenerateAppToken1**](TokensApiControllerApi.md#regenerateapptoken1) | **POST** /users-web/api/v3/apps/{appId}/tokens/{tokenId}/regenerate | Regenerate app token)
-[**updateAppToken1**](TokensApiControllerApi.md#updateapptoken1) | **PUT** /users-web/api/v3/apps/{appId}/tokens/{tokenId} | Update app token (enable/disable or name)
+| Method                                                                   | HTTP request                                                        | Description                               |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------- | ----------------------------------------- |
+| [**createAppToken1**](TokensApiControllerApi.md#createapptoken1)         | **POST** /users-web/api/v3/apps/{appId}/tokens                      | Create new app token                      |
+| [**deleteAppToken**](TokensApiControllerApi.md#deleteapptoken)           | **DELETE** /users-web/api/v3/apps/{appId}/tokens/{tokenId}          | Delete app token                          |
+| [**getAppTokens**](TokensApiControllerApi.md#getapptokens)               | **GET** /users-web/api/v3/apps/{appId}/tokens                       | Get app available tokens                  |
+| [**regenerateAppToken1**](TokensApiControllerApi.md#regenerateapptoken1) | **POST** /users-web/api/v3/apps/{appId}/tokens/{tokenId}/regenerate | Regenerate app token)                     |
+| [**updateAppToken1**](TokensApiControllerApi.md#updateapptoken1)         | **PUT** /users-web/api/v3/apps/{appId}/tokens/{tokenId}             | Update app token (enable/disable or name) |
 
 # **createAppToken1**
+
 > \sematext\stcloud\Model\TokenResponse createAppToken1($body, $app_id)
 
 Create new app token
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -44,10 +46,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\sematext\stcloud\Model\CreateTokenDto**](../Model/CreateTokenDto.md)| dto |
- **app_id** | **int**| appId |
+| Name       | Type                                                                     | Description | Notes |
+| ---------- | ------------------------------------------------------------------------ | ----------- | ----- |
+| **body**   | [**\sematext\stcloud\Model\CreateTokenDto**](../Model/CreateTokenDto.md) | dto         |
+| **app_id** | **int**                                                                  | appId       |
 
 ### Return type
 
@@ -59,17 +61,19 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deleteAppToken**
+
 > \sematext\stcloud\Model\GenericMapBasedApiResponse deleteAppToken($app_id, $token_id)
 
 Delete app token
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -98,10 +102,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **int**| appId |
- **token_id** | **int**| tokenId |
+| Name         | Type    | Description | Notes |
+| ------------ | ------- | ----------- | ----- |
+| **app_id**   | **int** | appId       |
+| **token_id** | **int** | tokenId     |
 
 ### Return type
 
@@ -113,17 +117,19 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAppTokens**
+
 > \sematext\stcloud\Model\TokensResponse getAppTokens($app_id)
 
 Get app available tokens
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -151,9 +157,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **int**| appId |
+| Name       | Type    | Description | Notes |
+| ---------- | ------- | ----------- | ----- |
+| **app_id** | **int** | appId       |
 
 ### Return type
 
@@ -165,17 +171,19 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **regenerateAppToken1**
+
 > \sematext\stcloud\Model\TokenResponse regenerateAppToken1($app_id, $token_id)
 
 Regenerate app token)
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -204,10 +212,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **int**| appId |
- **token_id** | **int**| tokenId |
+| Name         | Type    | Description | Notes |
+| ------------ | ------- | ----------- | ----- |
+| **app_id**   | **int** | appId       |
+| **token_id** | **int** | tokenId     |
 
 ### Return type
 
@@ -219,17 +227,19 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateAppToken1**
+
 > \sematext\stcloud\Model\TokenResponse updateAppToken1($body, $app_id, $token_id)
 
 Update app token (enable/disable or name)
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -259,11 +269,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\sematext\stcloud\Model\UpdateTokenDto**](../Model/UpdateTokenDto.md)| dto |
- **app_id** | **int**| appId |
- **token_id** | **int**| tokenId |
+| Name         | Type                                                                     | Description | Notes |
+| ------------ | ------------------------------------------------------------------------ | ----------- | ----- |
+| **body**     | [**\sematext\stcloud\Model\UpdateTokenDto**](../Model/UpdateTokenDto.md) | dto         |
+| **app_id**   | **int**                                                                  | appId       |
+| **token_id** | **int**                                                                  | tokenId     |
 
 ### Return type
 
@@ -275,8 +285,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

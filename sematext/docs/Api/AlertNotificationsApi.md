@@ -2,12 +2,13 @@
 
 All URIs are relative to */*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getAlertNotificationsForAppUsingPOST1**](AlertNotificationsApi.md#getalertnotificationsforappusingpost1) | **POST** /users-web/api/v3/apps/{appId}/notifications/alerts | Get alert notifications for an app
-[**getAlertNotificationsForUserUsingPOST1**](AlertNotificationsApi.md#getalertnotificationsforuserusingpost1) | **POST** /users-web/api/v3/notifications/alerts | Get alert notifications for a user
+| Method                                                                                                        | HTTP request                                                 | Description                        |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------- |
+| [**getAlertNotificationsForAppUsingPOST1**](AlertNotificationsApi.md#getalertnotificationsforappusingpost1)   | **POST** /users-web/api/v3/apps/{appId}/notifications/alerts | Get alert notifications for an app |
+| [**getAlertNotificationsForUserUsingPOST1**](AlertNotificationsApi.md#getalertnotificationsforuserusingpost1) | **POST** /users-web/api/v3/notifications/alerts              | Get alert notifications for a user |
 
 # **getAlertNotificationsForAppUsingPOST1**
+
 > \sematext\stcloud\Model\NotificationsResponse getAlertNotificationsForAppUsingPOST1($body, $app_id)
 
 Get alert notifications for an app
@@ -15,6 +16,7 @@ Get alert notifications for an app
 Default value of interval is 1d
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -43,10 +45,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\sematext\stcloud\Model\AlertNotificationRequest**](../Model/AlertNotificationRequest.md)| Time Interval |
- **app_id** | **int**| appId |
+| Name       | Type                                                                                         | Description   | Notes |
+| ---------- | -------------------------------------------------------------------------------------------- | ------------- | ----- |
+| **body**   | [**\sematext\stcloud\Model\AlertNotificationRequest**](../Model/AlertNotificationRequest.md) | Time Interval |
+| **app_id** | **int**                                                                                      | appId         |
 
 ### Return type
 
@@ -58,12 +60,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAlertNotificationsForUserUsingPOST1**
+
 > \sematext\stcloud\Model\NotificationsResponse getAlertNotificationsForUserUsingPOST1($body)
 
 Get alert notifications for a user
@@ -71,6 +74,7 @@ Get alert notifications for a user
 Default value of interval is 1d
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -98,9 +102,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\sematext\stcloud\Model\AlertNotificationRequest**](../Model/AlertNotificationRequest.md)| Time Interval |
+| Name     | Type                                                                                         | Description   | Notes |
+| -------- | -------------------------------------------------------------------------------------------- | ------------- | ----- |
+| **body** | [**\sematext\stcloud\Model\AlertNotificationRequest**](../Model/AlertNotificationRequest.md) | Time Interval |
 
 ### Return type
 
@@ -112,8 +116,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

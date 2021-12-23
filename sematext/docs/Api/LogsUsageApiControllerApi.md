@@ -2,16 +2,18 @@
 
 All URIs are relative to */*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getForRangeUsingGET**](LogsUsageApiControllerApi.md#getforrangeusingget) | **GET** /logsene-reports/api/v3/apps/{appId}/usage/{from}/{to} | getForRange
+| Method                                                                      | HTTP request                                                   | Description |
+| --------------------------------------------------------------------------- | -------------------------------------------------------------- | ----------- |
+| [**getForRangeUsingGET**](LogsUsageApiControllerApi.md#getforrangeusingget) | **GET** /logsene-reports/api/v3/apps/{appId}/usage/{from}/{to} | getForRange |
 
 # **getForRangeUsingGET**
+
 > \sematext\stcloud\Model\UsageResponse getForRangeUsingGET($app_id, $from, $to)
 
 getForRange
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -41,11 +43,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **int**| appId |
- **from** | **int**| from |
- **to** | **int**| to |
+| Name       | Type    | Description | Notes |
+| ---------- | ------- | ----------- | ----- |
+| **app_id** | **int** | appId       |
+| **from**   | **int** | from        |
+| **to**     | **int** | to          |
 
 ### Return type
 
@@ -57,8 +59,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-

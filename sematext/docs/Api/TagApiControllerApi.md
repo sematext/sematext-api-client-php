@@ -2,18 +2,20 @@
 
 All URIs are relative to */*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getTagNamesUsingGET1**](TagApiControllerApi.md#gettagnamesusingget1) | **GET** /spm-reports/api/v3/apps/{appIds}/tagNames | Gets tag names for the given application identifiers appearing in the given time frame.
-[**getUsingGET2**](TagApiControllerApi.md#getusingget2) | **GET** /spm-reports/api/v3/apps/{appIds}/metrics/filters | Gets values for specified tags for the given application identifiers appearing in the given time frame.
-[**getUsingGET3**](TagApiControllerApi.md#getusingget3) | **GET** /spm-reports/api/v3/apps/{appIds}/tags | Gets values for specified tags for the given application identifiers appearing in the given time frame.
+| Method                                                                  | HTTP request                                              | Description                                                                                             |
+| ----------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [**getTagNamesUsingGET1**](TagApiControllerApi.md#gettagnamesusingget1) | **GET** /spm-reports/api/v3/apps/{appIds}/tagNames        | Gets tag names for the given application identifiers appearing in the given time frame.                 |
+| [**getUsingGET2**](TagApiControllerApi.md#getusingget2)                 | **GET** /spm-reports/api/v3/apps/{appIds}/metrics/filters | Gets values for specified tags for the given application identifiers appearing in the given time frame. |
+| [**getUsingGET3**](TagApiControllerApi.md#getusingget3)                 | **GET** /spm-reports/api/v3/apps/{appIds}/tags            | Gets values for specified tags for the given application identifiers appearing in the given time frame. |
 
 # **getTagNamesUsingGET1**
+
 > \sematext\stcloud\Model\TagNamesResponse getTagNamesUsingGET1($app_ids, $from, $to, $metrics, $logs, $events, $rum)
 
 Gets tag names for the given application identifiers appearing in the given time frame.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -47,15 +49,15 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_ids** | **string**| appIds |
- **from** | **int**| from | [optional]
- **to** | **int**| to | [optional]
- **metrics** | **bool**| metrics | [optional] [default to true]
- **logs** | **bool**| logs | [optional] [default to true]
- **events** | **bool**| events | [optional] [default to false]
- **rum** | **bool**| rum | [optional] [default to true]
+| Name        | Type       | Description | Notes                         |
+| ----------- | ---------- | ----------- | ----------------------------- |
+| **app_ids** | **string** | appIds      |
+| **from**    | **int**    | from        | [optional]                    |
+| **to**      | **int**    | to          | [optional]                    |
+| **metrics** | **bool**   | metrics     | [optional] [default to true]  |
+| **logs**    | **bool**   | logs        | [optional] [default to true]  |
+| **events**  | **bool**   | events      | [optional] [default to false] |
+| **rum**     | **bool**   | rum         | [optional] [default to true]  |
 
 ### Return type
 
@@ -67,17 +69,19 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUsingGET2**
+
 > map[string,\sematext\stcloud\Model\Dimension] getUsingGET2($app_ids, $tag, $from, $to, $metrics, $logs, $events, $rum)
 
 Gets values for specified tags for the given application identifiers appearing in the given time frame.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -112,16 +116,16 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_ids** | **string**| appIds |
- **tag** | [**string[]**](../Model/string.md)| tag |
- **from** | **int**| from | [optional]
- **to** | **int**| to | [optional]
- **metrics** | **bool**| metrics | [optional] [default to true]
- **logs** | **bool**| logs | [optional] [default to true]
- **events** | **bool**| events | [optional] [default to false]
- **rum** | **bool**| rum | [optional] [default to true]
+| Name        | Type                               | Description | Notes                         |
+| ----------- | ---------------------------------- | ----------- | ----------------------------- |
+| **app_ids** | **string**                         | appIds      |
+| **tag**     | [**string[]**](../Model/string.md) | tag         |
+| **from**    | **int**                            | from        | [optional]                    |
+| **to**      | **int**                            | to          | [optional]                    |
+| **metrics** | **bool**                           | metrics     | [optional] [default to true]  |
+| **logs**    | **bool**                           | logs        | [optional] [default to true]  |
+| **events**  | **bool**                           | events      | [optional] [default to false] |
+| **rum**     | **bool**                           | rum         | [optional] [default to true]  |
 
 ### Return type
 
@@ -133,17 +137,19 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUsingGET3**
+
 > map[string,\sematext\stcloud\Model\Dimension] getUsingGET3($app_ids, $tag, $from, $to, $metrics, $logs, $events, $rum)
 
 Gets values for specified tags for the given application identifiers appearing in the given time frame.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -178,16 +184,16 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_ids** | **string**| appIds |
- **tag** | [**string[]**](../Model/string.md)| tag |
- **from** | **int**| from | [optional]
- **to** | **int**| to | [optional]
- **metrics** | **bool**| metrics | [optional] [default to true]
- **logs** | **bool**| logs | [optional] [default to true]
- **events** | **bool**| events | [optional] [default to false]
- **rum** | **bool**| rum | [optional] [default to true]
+| Name        | Type                               | Description | Notes                         |
+| ----------- | ---------------------------------- | ----------- | ----------------------------- |
+| **app_ids** | **string**                         | appIds      |
+| **tag**     | [**string[]**](../Model/string.md) | tag         |
+| **from**    | **int**                            | from        | [optional]                    |
+| **to**      | **int**                            | to          | [optional]                    |
+| **metrics** | **bool**                           | metrics     | [optional] [default to true]  |
+| **logs**    | **bool**                           | logs        | [optional] [default to true]  |
+| **events**  | **bool**                           | events      | [optional] [default to false] |
+| **rum**     | **bool**                           | rum         | [optional] [default to true]  |
 
 ### Return type
 
@@ -199,8 +205,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
