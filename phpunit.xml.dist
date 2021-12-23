@@ -7,15 +7,15 @@
          stopOnFailure="false">
     <testsuites>
         <testsuite>
-            <directory>./test/Api</directory>
-            <directory>./test/Model</directory>
+            <directory>./sematext/test/Api</directory>
+            <directory>./sematext/test/Model</directory>
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./stcloud/API</directory>
-            <directory suffix=".php">./stcloud/Model</directory>
+            <directory suffix=".php">./sematext/stcloud/API</directory>
+            <directory suffix=".php">./sematext/stcloud/Model</directory>
         </whitelist>
     </filter>
 </phpunit>
