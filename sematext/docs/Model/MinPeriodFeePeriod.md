@@ -1,4 +1,4 @@
-# MinPeriodFeePeriod
+*# MinPeriodFeePeriod
 
 ## Properties
 
@@ -19,3 +19,5 @@
 | **used_plan_period_fee**        | **float**                     |             | [optional] |
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+
+*

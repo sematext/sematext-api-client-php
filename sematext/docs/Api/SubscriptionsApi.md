@@ -2,22 +2,22 @@
 
 All URIs are relative to */*
 
-| Method                                                                     | HTTP request                                                          | Description                              |
-| -------------------------------------------------------------------------- | --------------------------------------------------------------------- | ---------------------------------------- |
-| [**createForAppUsingPOST1**](SubscriptionsApi.md#createforappusingpost1)   | **POST** /users-web/api/v3/apps/{appId}/subscription                  | Create App subscription                  |
-| [**createForDashUsingPOST1**](SubscriptionsApi.md#createfordashusingpost1) | **POST** /users-web/api/v3/dashboards/{dashId}/subscription           | Create dashboard subscription            |
-| [**deleteUsingDELETE2**](SubscriptionsApi.md#deleteusingdelete2)           | **DELETE** /users-web/api/v3/subscriptions/{updateableSubscriptionId} | Delete subscription                      |
-| [**listUsingGET2**](SubscriptionsApi.md#listusingget2)                     | **GET** /users-web/api/v3/apps/{appId}/subscriptions                  | Get subscriptions for an App             |
-| [**listUsingGET5**](SubscriptionsApi.md#listusingget5)                     | **GET** /users-web/api/v3/subscriptions                               | Get current account&#x27;s subscriptions |
-| [**sendAppReportUsingPOST**](SubscriptionsApi.md#sendappreportusingpost)   | **POST** /users-web/api/v3/apps/{appId}/report/send                   | Email an App report                      |
-| [**sendDashReportUsingPOST**](SubscriptionsApi.md#senddashreportusingpost) | **POST** /users-web/api/v3/dashboards/{dashId}/report/send            | Email a dashboard report                 |
-| [**toggleEnabledUsingPUT1**](SubscriptionsApi.md#toggleenabledusingput1)   | **PUT** /users-web/api/v3/subscriptions/{updateableSubscriptionId}    | Toggle subscription status               |
-| [**updateForAppUsingPUT1**](SubscriptionsApi.md#updateforappusingput1)     | **PUT** /users-web/api/v3/apps/{appId}/subscription                   | Update App subscription                  |
-| [**updateForDashUsingPUT**](SubscriptionsApi.md#updatefordashusingput)     | **PUT** /users-web/api/v3/dashboards/{dashId}/subscription            | Update dashboard subscription            |
+| Method                                                                       | HTTP request                                                          | Description                              |
+| ---------------------------------------------------------------------------- | --------------------------------------------------------------------- | ---------------------------------------- |
+| [**createForAppUsingPOST**](SubscriptionsApi.md#createforappusingpost)       | **POST** /users-web/api/v3/apps/{appId}/subscription                  | Create App subscription                  |
+| [**createForDashUsingPOST1**](SubscriptionsApi.md#createfordashusingpost1)   | **POST** /users-web/api/v3/dashboards/{dashId}/subscription           | Create dashboard subscription            |
+| [**deleteUsingDELETE3**](SubscriptionsApi.md#deleteusingdelete3)             | **DELETE** /users-web/api/v3/subscriptions/{updateableSubscriptionId} | Delete subscription                      |
+| [**listUsingGET2**](SubscriptionsApi.md#listusingget2)                       | **GET** /users-web/api/v3/apps/{appId}/subscriptions                  | Get subscriptions for an App             |
+| [**listUsingGET5**](SubscriptionsApi.md#listusingget5)                       | **GET** /users-web/api/v3/subscriptions                               | Get current account&#x27;s subscriptions |
+| [**sendAppReportUsingPOST1**](SubscriptionsApi.md#sendappreportusingpost1)   | **POST** /users-web/api/v3/apps/{appId}/report/send                   | Email an App report                      |
+| [**sendDashReportUsingPOST1**](SubscriptionsApi.md#senddashreportusingpost1) | **POST** /users-web/api/v3/dashboards/{dashId}/report/send            | Email a dashboard report                 |
+| [**toggleEnabledUsingPUT**](SubscriptionsApi.md#toggleenabledusingput)       | **PUT** /users-web/api/v3/subscriptions/{updateableSubscriptionId}    | Toggle subscription status               |
+| [**updateForAppUsingPUT1**](SubscriptionsApi.md#updateforappusingput1)       | **PUT** /users-web/api/v3/apps/{appId}/subscription                   | Update App subscription                  |
+| [**updateForDashUsingPUT**](SubscriptionsApi.md#updatefordashusingput)       | **PUT** /users-web/api/v3/dashboards/{dashId}/subscription            | Update dashboard subscription            |
 
-# **createForAppUsingPOST1**
+# **createForAppUsingPOST**
 
-> \sematext\stcloud\Model\SubscriptionResponse createForAppUsingPOST1($body, $app_id)
+> \sematext\stcloud\Model\SubscriptionResponse createForAppUsingPOST($body, $app_id)
 
 Create App subscription
 
@@ -41,10 +41,10 @@ $body = new \sematext\stcloud\Model\SubscriptionDto(); // \sematext\stcloud\Mode
 $app_id = 789; // int | appId
 
 try {
-    $result = $apiInstance->createForAppUsingPOST1($body, $app_id);
+    $result = $apiInstance->createForAppUsingPOST($body, $app_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SubscriptionsApi->createForAppUsingPOST1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscriptionsApi->createForAppUsingPOST: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -127,9 +127,9 @@ try {
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **deleteUsingDELETE2**
+# **deleteUsingDELETE3**
 
-> \sematext\stcloud\Model\GenericMapBasedApiResponse deleteUsingDELETE2($updateable_subscription_id)
+> \sematext\stcloud\Model\GenericMapBasedApiResponse deleteUsingDELETE3($updateable_subscription_id)
 
 Delete subscription
 
@@ -152,10 +152,10 @@ $apiInstance = new sematext\stcloud\API\SubscriptionsApi(
 $updateable_subscription_id = 789; // int | updateableSubscriptionId
 
 try {
-    $result = $apiInstance->deleteUsingDELETE2($updateable_subscription_id);
+    $result = $apiInstance->deleteUsingDELETE3($updateable_subscription_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SubscriptionsApi->deleteUsingDELETE2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscriptionsApi->deleteUsingDELETE3: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -286,9 +286,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **sendAppReportUsingPOST**
+# **sendAppReportUsingPOST1**
 
-> \sematext\stcloud\Model\MailReportResponse sendAppReportUsingPOST($body, $app_id)
+> \sematext\stcloud\Model\MailReportResponse sendAppReportUsingPOST1($body, $app_id)
 
 Email an App report
 
@@ -312,10 +312,10 @@ $body = new \sematext\stcloud\Model\ReportInfo(); // \sematext\stcloud\Model\Rep
 $app_id = 789; // int | appId
 
 try {
-    $result = $apiInstance->sendAppReportUsingPOST($body, $app_id);
+    $result = $apiInstance->sendAppReportUsingPOST1($body, $app_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SubscriptionsApi->sendAppReportUsingPOST: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscriptionsApi->sendAppReportUsingPOST1: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -342,9 +342,9 @@ try {
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **sendDashReportUsingPOST**
+# **sendDashReportUsingPOST1**
 
-> \sematext\stcloud\Model\MailReportResponse sendDashReportUsingPOST($body, $dash_id)
+> \sematext\stcloud\Model\MailReportResponse sendDashReportUsingPOST1($body, $dash_id)
 
 Email a dashboard report
 
@@ -368,10 +368,10 @@ $body = new \sematext\stcloud\Model\ReportInfo(); // \sematext\stcloud\Model\Rep
 $dash_id = 789; // int | dashId
 
 try {
-    $result = $apiInstance->sendDashReportUsingPOST($body, $dash_id);
+    $result = $apiInstance->sendDashReportUsingPOST1($body, $dash_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SubscriptionsApi->sendDashReportUsingPOST: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscriptionsApi->sendDashReportUsingPOST1: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -398,9 +398,9 @@ try {
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **toggleEnabledUsingPUT1**
+# **toggleEnabledUsingPUT**
 
-> \sematext\stcloud\Model\SubscriptionResponse toggleEnabledUsingPUT1($body, $updateable_subscription_id)
+> \sematext\stcloud\Model\SubscriptionResponse toggleEnabledUsingPUT($body, $updateable_subscription_id)
 
 Toggle subscription status
 
@@ -424,10 +424,10 @@ $body = new \sematext\stcloud\Model\UpdateSubscriptionDto(); // \sematext\stclou
 $updateable_subscription_id = 789; // int | updateableSubscriptionId
 
 try {
-    $result = $apiInstance->toggleEnabledUsingPUT1($body, $updateable_subscription_id);
+    $result = $apiInstance->toggleEnabledUsingPUT($body, $updateable_subscription_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SubscriptionsApi->toggleEnabledUsingPUT1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscriptionsApi->toggleEnabledUsingPUT: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

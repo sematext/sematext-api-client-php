@@ -2,13 +2,13 @@
 
 All URIs are relative to */*
 
-| Method                                                                     | HTTP request                                      | Description    |
-| -------------------------------------------------------------------------- | ------------------------------------------------- | -------------- |
-| [**resetPasswordUsingPOST1**](ResetPasswordApi.md#resetpasswordusingpost1) | **POST** /users-web/api/v3/account/password/reset | Reset Password |
+| Method                                                                   | HTTP request                                      | Description    |
+| ------------------------------------------------------------------------ | ------------------------------------------------- | -------------- |
+| [**resetPasswordUsingPOST**](ResetPasswordApi.md#resetpasswordusingpost) | **POST** /users-web/api/v3/account/password/reset | Reset Password |
 
-# **resetPasswordUsingPOST1**
+# **resetPasswordUsingPOST**
 
-> \sematext\stcloud\Model\GenericMapBasedApiResponse resetPasswordUsingPOST1($body)
+> \sematext\stcloud\Model\GenericMapBasedApiResponse resetPasswordUsingPOST($body)
 
 Reset Password
 
@@ -31,10 +31,10 @@ $apiInstance = new sematext\stcloud\API\ResetPasswordApi(
 $body = new \sematext\stcloud\Model\UserInfo(); // \sematext\stcloud\Model\UserInfo | dto
 
 try {
-    $result = $apiInstance->resetPasswordUsingPOST1($body);
+    $result = $apiInstance->resetPasswordUsingPOST($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ResetPasswordApi->resetPasswordUsingPOST1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ResetPasswordApi->resetPasswordUsingPOST: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

@@ -2,17 +2,17 @@
 
 All URIs are relative to */*
 
-| Method                                                                        | HTTP request                                                 | Description                |
-| ----------------------------------------------------------------------------- | ------------------------------------------------------------ | -------------------------- |
-| [**createAlertUsingPOST1**](AlertsApi.md#createalertusingpost1)               | **POST** /users-web/api/v3/alerts                            | Create alert rule          |
-| [**deleteAlertRuleUsingDELETE1**](AlertsApi.md#deletealertruleusingdelete1)   | **DELETE** /users-web/api/v3/alerts/{updateableAlertId}      | Delete alert rule          |
-| [**disableAlertRuleUsingPUT1**](AlertsApi.md#disablealertruleusingput1)       | **PUT** /users-web/api/v3/alerts/{updateableAlertId}/disable | Disable alert rule         |
-| [**enableAlertRuleUsingPUT1**](AlertsApi.md#enablealertruleusingput1)         | **PUT** /users-web/api/v3/alerts/{updateableAlertId}/enable  | Enable alert rule          |
-| [**getAlertRulesForAppUsingGET1**](AlertsApi.md#getalertrulesforappusingget1) | **GET** /users-web/api/v3/apps/{appId}/alerts                | Get alert rules for an app |
+| Method                                                                      | HTTP request                                                 | Description                |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------ | -------------------------- |
+| [**createAlertUsingPOST**](AlertsApi.md#createalertusingpost)               | **POST** /users-web/api/v3/alerts                            | Create alert rule          |
+| [**deleteAlertRuleUsingDELETE**](AlertsApi.md#deletealertruleusingdelete)   | **DELETE** /users-web/api/v3/alerts/{updateableAlertId}      | Delete alert rule          |
+| [**disableAlertRuleUsingPUT**](AlertsApi.md#disablealertruleusingput)       | **PUT** /users-web/api/v3/alerts/{updateableAlertId}/disable | Disable alert rule         |
+| [**enableAlertRuleUsingPUT**](AlertsApi.md#enablealertruleusingput)         | **PUT** /users-web/api/v3/alerts/{updateableAlertId}/enable  | Enable alert rule          |
+| [**getAlertRulesForAppUsingGET**](AlertsApi.md#getalertrulesforappusingget) | **GET** /users-web/api/v3/apps/{appId}/alerts                | Get alert rules for an app |
 
-# **createAlertUsingPOST1**
+# **createAlertUsingPOST**
 
-> \sematext\stcloud\Model\AlertRuleResponse createAlertUsingPOST1($body)
+> \sematext\stcloud\Model\AlertRuleResponse createAlertUsingPOST($body)
 
 Create alert rule
 
@@ -35,10 +35,10 @@ $apiInstance = new sematext\stcloud\API\AlertsApi(
 $body = new \sematext\stcloud\Model\AlertRule(); // \sematext\stcloud\Model\AlertRule | dto
 
 try {
-    $result = $apiInstance->createAlertUsingPOST1($body);
+    $result = $apiInstance->createAlertUsingPOST($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AlertsApi->createAlertUsingPOST1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AlertsApi->createAlertUsingPOST: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -64,9 +64,9 @@ try {
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **deleteAlertRuleUsingDELETE1**
+# **deleteAlertRuleUsingDELETE**
 
-> \sematext\stcloud\Model\GenericMapBasedApiResponse deleteAlertRuleUsingDELETE1($updateable_alert_id)
+> \sematext\stcloud\Model\GenericMapBasedApiResponse deleteAlertRuleUsingDELETE($updateable_alert_id)
 
 Delete alert rule
 
@@ -89,10 +89,10 @@ $apiInstance = new sematext\stcloud\API\AlertsApi(
 $updateable_alert_id = 789; // int | updateableAlertId
 
 try {
-    $result = $apiInstance->deleteAlertRuleUsingDELETE1($updateable_alert_id);
+    $result = $apiInstance->deleteAlertRuleUsingDELETE($updateable_alert_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AlertsApi->deleteAlertRuleUsingDELETE1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AlertsApi->deleteAlertRuleUsingDELETE: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -118,9 +118,9 @@ try {
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **disableAlertRuleUsingPUT1**
+# **disableAlertRuleUsingPUT**
 
-> \sematext\stcloud\Model\GenericMapBasedApiResponse disableAlertRuleUsingPUT1($updateable_alert_id)
+> \sematext\stcloud\Model\GenericMapBasedApiResponse disableAlertRuleUsingPUT($updateable_alert_id)
 
 Disable alert rule
 
@@ -143,10 +143,10 @@ $apiInstance = new sematext\stcloud\API\AlertsApi(
 $updateable_alert_id = 789; // int | updateableAlertId
 
 try {
-    $result = $apiInstance->disableAlertRuleUsingPUT1($updateable_alert_id);
+    $result = $apiInstance->disableAlertRuleUsingPUT($updateable_alert_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AlertsApi->disableAlertRuleUsingPUT1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AlertsApi->disableAlertRuleUsingPUT: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -172,9 +172,9 @@ try {
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **enableAlertRuleUsingPUT1**
+# **enableAlertRuleUsingPUT**
 
-> \sematext\stcloud\Model\GenericMapBasedApiResponse enableAlertRuleUsingPUT1($updateable_alert_id)
+> \sematext\stcloud\Model\GenericMapBasedApiResponse enableAlertRuleUsingPUT($updateable_alert_id)
 
 Enable alert rule
 
@@ -197,10 +197,10 @@ $apiInstance = new sematext\stcloud\API\AlertsApi(
 $updateable_alert_id = 789; // int | updateableAlertId
 
 try {
-    $result = $apiInstance->enableAlertRuleUsingPUT1($updateable_alert_id);
+    $result = $apiInstance->enableAlertRuleUsingPUT($updateable_alert_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AlertsApi->enableAlertRuleUsingPUT1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AlertsApi->enableAlertRuleUsingPUT: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -226,9 +226,9 @@ try {
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getAlertRulesForAppUsingGET1**
+# **getAlertRulesForAppUsingGET**
 
-> \sematext\stcloud\Model\AlertRulesResponse getAlertRulesForAppUsingGET1($app_id)
+> \sematext\stcloud\Model\AlertRulesResponse getAlertRulesForAppUsingGET($app_id)
 
 Get alert rules for an app
 
@@ -251,10 +251,10 @@ $apiInstance = new sematext\stcloud\API\AlertsApi(
 $app_id = 789; // int | appId
 
 try {
-    $result = $apiInstance->getAlertRulesForAppUsingGET1($app_id);
+    $result = $apiInstance->getAlertRulesForAppUsingGET($app_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AlertsApi->getAlertRulesForAppUsingGET1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AlertsApi->getAlertRulesForAppUsingGET: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

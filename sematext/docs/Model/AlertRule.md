@@ -38,6 +38,7 @@
 | **notification_emails**                        | **string[]**                                                                                |             | [optional] |
 | **notification_integrations**                  | [**\sematext\stcloud\Model\NotificationIntegration[]**](NotificationIntegration.md)         |             | [optional] |
 | **notifications_enabled**                      | **bool**                                                                                    |             | [optional] |
+| **priority**                                   | **string**                                                                                  |             | [optional] |
 | **query**                                      | **string**                                                                                  |             | [optional] |
 | **report_name**                                | **string**                                                                                  |             | [optional] |
 | **rule_key**                                   | **int**                                                                                     |             | [optional] |
