@@ -2,13 +2,13 @@
 
 All URIs are relative to */*
 
-| Method                                                                   | HTTP request                                                        | Description                               |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------- | ----------------------------------------- |
-| [**createAppToken1**](TokensApiControllerApi.md#createapptoken1)         | **POST** /users-web/api/v3/apps/{appId}/tokens                      | Create new app token                      |
-| [**deleteAppToken**](TokensApiControllerApi.md#deleteapptoken)           | **DELETE** /users-web/api/v3/apps/{appId}/tokens/{tokenId}          | Delete app token                          |
-| [**getAppTokens**](TokensApiControllerApi.md#getapptokens)               | **GET** /users-web/api/v3/apps/{appId}/tokens                       | Get app available tokens                  |
-| [**regenerateAppToken1**](TokensApiControllerApi.md#regenerateapptoken1) | **POST** /users-web/api/v3/apps/{appId}/tokens/{tokenId}/regenerate | Regenerate app token)                     |
-| [**updateAppToken1**](TokensApiControllerApi.md#updateapptoken1)         | **PUT** /users-web/api/v3/apps/{appId}/tokens/{tokenId}             | Update app token (enable/disable or name) |
+| Method                                                                 | HTTP request                                                        | Description                               |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------- |
+| [**createAppToken1**](TokensApiControllerApi.md#createapptoken1)       | **POST** /users-web/api/v3/apps/{appId}/tokens                      | Create new app token                      |
+| [**deleteAppToken1**](TokensApiControllerApi.md#deleteapptoken1)       | **DELETE** /users-web/api/v3/apps/{appId}/tokens/{tokenId}          | Delete app token                          |
+| [**getAppTokens1**](TokensApiControllerApi.md#getapptokens1)           | **GET** /users-web/api/v3/apps/{appId}/tokens                       | Get app available tokens                  |
+| [**regenerateAppToken**](TokensApiControllerApi.md#regenerateapptoken) | **POST** /users-web/api/v3/apps/{appId}/tokens/{tokenId}/regenerate | Regenerate app token)                     |
+| [**updateAppToken1**](TokensApiControllerApi.md#updateapptoken1)       | **PUT** /users-web/api/v3/apps/{appId}/tokens/{tokenId}             | Update app token (enable/disable or name) |
 
 # **createAppToken1**
 
@@ -66,9 +66,9 @@ try {
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **deleteAppToken**
+# **deleteAppToken1**
 
-> \sematext\stcloud\Model\GenericMapBasedApiResponse deleteAppToken($app_id, $token_id)
+> \sematext\stcloud\Model\GenericMapBasedApiResponse deleteAppToken1($app_id, $token_id)
 
 Delete app token
 
@@ -92,10 +92,10 @@ $app_id = 789; // int | appId
 $token_id = 789; // int | tokenId
 
 try {
-    $result = $apiInstance->deleteAppToken($app_id, $token_id);
+    $result = $apiInstance->deleteAppToken1($app_id, $token_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TokensApiControllerApi->deleteAppToken: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TokensApiControllerApi->deleteAppToken1: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -122,9 +122,9 @@ try {
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getAppTokens**
+# **getAppTokens1**
 
-> \sematext\stcloud\Model\TokensResponse getAppTokens($app_id)
+> \sematext\stcloud\Model\TokensResponse getAppTokens1($app_id)
 
 Get app available tokens
 
@@ -147,10 +147,10 @@ $apiInstance = new sematext\stcloud\API\TokensApiControllerApi(
 $app_id = 789; // int | appId
 
 try {
-    $result = $apiInstance->getAppTokens($app_id);
+    $result = $apiInstance->getAppTokens1($app_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TokensApiControllerApi->getAppTokens: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TokensApiControllerApi->getAppTokens1: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -176,9 +176,9 @@ try {
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **regenerateAppToken1**
+# **regenerateAppToken**
 
-> \sematext\stcloud\Model\TokenResponse regenerateAppToken1($app_id, $token_id)
+> \sematext\stcloud\Model\TokenResponse regenerateAppToken($app_id, $token_id)
 
 Regenerate app token)
 
@@ -202,10 +202,10 @@ $app_id = 789; // int | appId
 $token_id = 789; // int | tokenId
 
 try {
-    $result = $apiInstance->regenerateAppToken1($app_id, $token_id);
+    $result = $apiInstance->regenerateAppToken($app_id, $token_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TokensApiControllerApi->regenerateAppToken1: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TokensApiControllerApi->regenerateAppToken: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

@@ -6,7 +6,7 @@ All URIs are relative to */*
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------- |
 | [**getDetailedInvoiceUsingGET1**](BillingApi.md#getdetailedinvoiceusingget1) | **GET** /users-web/api/v3/billing/invoice/{service}/{year}/{month} | Get invoice details    |
 | [**listAvailablePlansUsingGET1**](BillingApi.md#listavailableplansusingget1) | **GET** /users-web/api/v3/billing/availablePlans                   | Get available plans    |
-| [**updatePlanUsingPUT**](BillingApi.md#updateplanusingput)                   | **PUT** /users-web/api/v3/billing/info/{appId}                     | Update plan for an app |
+| [**updatePlanUsingPUT1**](BillingApi.md#updateplanusingput1)                 | **PUT** /users-web/api/v3/billing/info/{appId}                     | Update plan for an app |
 
 # **getDetailedInvoiceUsingGET1**
 
@@ -122,9 +122,9 @@ try {
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **updatePlanUsingPUT**
+# **updatePlanUsingPUT1**
 
-> \sematext\stcloud\Model\UpdatePlanResponse updatePlanUsingPUT($body, $app_id)
+> \sematext\stcloud\Model\UpdatePlanResponse updatePlanUsingPUT1($body, $app_id)
 
 Update plan for an app
 
@@ -148,10 +148,10 @@ $body = new \sematext\stcloud\Model\BillingInfo(); // \sematext\stcloud\Model\Bi
 $app_id = 789; // int | appId
 
 try {
-    $result = $apiInstance->updatePlanUsingPUT($body, $app_id);
+    $result = $apiInstance->updatePlanUsingPUT1($body, $app_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling BillingApi->updatePlanUsingPUT: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling BillingApi->updatePlanUsingPUT1: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
